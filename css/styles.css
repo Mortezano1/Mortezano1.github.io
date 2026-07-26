@@ -110,7 +110,7 @@ p a:hover {
    Main Layout & Single Column Logic
    ========================================================================== */
 .container {
-    max-width: 900px;
+    max-width: 1500px;
     margin: 4rem auto;
     padding: 0 2rem;
     display: grid;
