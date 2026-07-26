@@ -29,10 +29,28 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Typography & Links */
+/* ==========================================================================
+   Typography & Links
+   ========================================================================== */
 h1, h2, h3 {
     color: var(--text-heading);
     font-weight: 600;
+}
+
+.profile-name {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+    color: var(--text-heading);
+}
+
+.profile-subtitle {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem;
+    letter-spacing: 0.3px;
 }
 
 a {
@@ -41,7 +59,7 @@ a {
     transition: color 0.2s ease;
 }
 
-p a, .role-list li {
+p a {
     color: var(--accent-color);
 }
 
@@ -56,7 +74,7 @@ p a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2.5rem; /* پدینگ استاندارد و راحت */
+    padding: 1rem 2.5rem;
     background-color: var(--nav-bg);
     border-bottom: 1px solid var(--border-color);
 }
@@ -69,7 +87,6 @@ p a:hover {
 
 .nav-brand {
     font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.1rem;
     font-weight: 600;
     font-size: 25px;
     color: var(--text-heading);
@@ -77,34 +94,32 @@ p a:hover {
 
 .nav-links {
     display: flex;
-    gap: 0.5rem; /* فاصله‌ی کمتر بین دکمه‌ها برای انسجام بیشتر */
+    gap: 0.5rem;
     align-items: center;
 }
 
 .tab-link {
     background: transparent;
-    border: 1px solid transparent; /* آماده‌سازی برای کادر حالت فعال */
+    border: 1px solid transparent;
     font-size: 0.9rem;
     font-weight: 500;
     color: #999;
     cursor: pointer;
     font-family: inherit;
-    padding: 0.5rem 1rem; /* ایجاد فضای داخلی شبیه دکمه */
-    border-radius: 10px; /* گوشه‌های گرد و مدرن */
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
     transition: all 0.3s ease;
 }
 
-/* افکت هاور (Hover) - وقتی موس روی دکمه می‌رود */
 .tab-link:hover {
     color: var(--text-heading);
-    background-color: rgba(255, 255, 255, 0.05); /* یک پس‌زمینه شیشه‌ای و ظریف */
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* استایل تبی که الان در آن هستیم (فعال) - هاله نوری سبز */
 .tab-link.active {
-    color: var(--text-color);
-    background-color: rgba(255, 255, 255, 0.05); /* رنگ سبز با 10% شفافیت */
-    border: 1px solid rgba(255, 255, 255, 0.05); /* کادر بسیار محو سبز */
+    color: var(--text-heading);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .nav-right {
@@ -123,6 +138,7 @@ p a:hover {
 .nav-right a:hover {
     color: var(--text-heading);
 }
+
 /* ==========================================================================
    Main Layout & Single Column Logic
    ========================================================================== */
@@ -131,13 +147,13 @@ p a:hover {
     margin: 4rem auto;
     padding: 0 2rem;
     display: grid;
-    grid-template-columns: 280px 1fr; /* عرض ستون سمت چپ و راست */
+    grid-template-columns: 280px 1fr;
     gap: 3rem;
     transition: all 0.2s ease-in-out;
 }
 
-/* استایل تک‌ستونه برای تب‌های غیر از Home */
 .container.single-column {
+    max-width: 1300px;
     grid-template-columns: 1fr !important;
 }
 
@@ -194,7 +210,7 @@ p a:hover {
 }
 
 /* ==========================================================================
-   Right Column: Content & Tabs
+   Right Column: Base Content & Tabs
    ========================================================================== */
 .content-area {
     border-left: 1px solid var(--border-color);
@@ -211,37 +227,109 @@ p a:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.tab-content p {
-    margin-bottom: 1rem;
+/* ==========================================================================
+   Home Page Specific Styles (Beautified)
+   ========================================================================== */
+.lead-text {
+    font-size: 1.05rem;
+    color: #e5e7eb;
+    margin-bottom: 2.5rem;
 }
 
-strong {
+.lead-text p {
+    margin-bottom: 1.2rem;
+}
+
+.section-block {
+    margin-bottom: 3.5rem;
+}
+
+.section-block h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
     color: var(--text-heading);
 }
 
-.current-role {
-    margin-top: 2.5rem;
+/* Current Role Card */
+.role-card {
+    background-color: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-color);
+    padding: 1.2rem 1.5rem;
+    border-radius: 6px;
 }
 
-.current-role h2 {
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+.role-card .role-title {
+    font-size: 1.1rem;
+    color: var(--text-heading);
+    margin-bottom: 0.8rem;
 }
 
-.role-title {
-    color: var(--text-main);
-    margin-bottom: 0.2rem;
+.role-card .role-company {
+    color: var(--accent-color);
+    font-size: 0.95rem;
+    font-weight: 500;
 }
 
 .role-list {
-    list-style-type: disc;
-    padding-left: 1.2rem;
+    list-style-type: none;
+    padding-left: 0;
 }
 
+.role-list li {
+    position: relative;
+    padding-left: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.role-list li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+}
+
+/* Research Interests Tags */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1rem;
+}
+
+.tag {
+    background-color: rgba(16, 185, 129, 0.08); /* سبز ترانسپرنت */
+    color: var(--accent-color);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.tag:hover {
+    background-color: rgba(16, 185, 129, 0.15);
+    border-color: rgba(16, 185, 129, 0.4);
+    transform: translateY(-2px);
+}
+
+.biography-block p {
+    margin-bottom: 1.2rem;
+}
+
+/* ==========================================================================
+   Experience / Education List Items
+   ========================================================================== */
 .list-item {
     display: flex;
     gap: 1.5rem;
@@ -267,7 +355,9 @@ strong {
     margin-bottom: 0.5rem;
 }
 
-/* Responsive */
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
