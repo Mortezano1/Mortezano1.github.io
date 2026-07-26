@@ -48,13 +48,13 @@ p a:hover {
 }
 
 /* ==========================================================================
-   Navigation Bar
+   Navigation Bar (Modern Pill Buttons)
    ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.2rem 2.5rem;
+    padding: 1rem 2.5rem; /* پدینگ استاندارد و راحت */
     background-color: var(--nav-bg);
     border-bottom: 1px solid var(--border-color);
 }
@@ -62,34 +62,46 @@ p a:hover {
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .nav-brand {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 25px;
     color: var(--text-heading);
 }
 
 .nav-links {
     display: flex;
-    gap: 1.5rem;
+    gap: 0.5rem; /* فاصله‌ی کمتر بین دکمه‌ها برای انسجام بیشتر */
+    align-items: center;
 }
 
 .tab-link {
-    background: none;
-    border: none;
-    font-size: 0.95rem;
+    background: transparent;
+    border: 1px solid transparent; /* آماده‌سازی برای کادر حالت فعال */
+    font-size: 0.9rem;
+    font-weight: 500;
     color: #999;
     cursor: pointer;
     font-family: inherit;
-    padding: 0;
-    transition: color 0.2s ease;
+    padding: 0.5rem 1rem; /* ایجاد فضای داخلی شبیه دکمه */
+    border-radius: 10px; /* گوشه‌های گرد و مدرن */
+    transition: all 0.3s ease;
 }
 
-.tab-link.active,
+/* افکت هاور (Hover) - وقتی موس روی دکمه می‌رود */
 .tab-link:hover {
     color: var(--text-heading);
+    background-color: rgba(255, 255, 255, 0.05); /* یک پس‌زمینه شیشه‌ای و ظریف */
+}
+
+/* استایل تبی که الان در آن هستیم (فعال) - هاله نوری سبز */
+.tab-link.active {
+    color: var(--text-color);
+    background-color: rgba(255, 255, 255, 0.05); /* رنگ سبز با 10% شفافیت */
+    border: 1px solid rgba(255, 255, 255, 0.05); /* کادر بسیار محو سبز */
 }
 
 .nav-right {
@@ -100,17 +112,19 @@ p a:hover {
 
 .nav-right a {
     color: #999;
+    display: flex;
+    align-items: center;
+    transition: color 0.2s ease;
 }
 
 .nav-right a:hover {
     color: var(--text-heading);
 }
-
 /* ==========================================================================
    Main Layout & Single Column Logic
    ========================================================================== */
 .container {
-    max-width: 1500px;
+    max-width: 1400px;
     margin: 4rem auto;
     padding: 0 2rem;
     display: grid;
