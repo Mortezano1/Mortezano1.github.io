@@ -8,10 +8,10 @@
     --nav-bg: #222222;
     --text-main: #d4d4d4;
     --text-heading: #ffffff;
-    --accent-color: #10b981;
+    --accent-color: #69447c;
     --border-color: #3f3f46;
     --pill-border: #52525b;
-    --pill-hover: #3f3f46;
+    --pill-hover: #171717;
 }
 
 * {
@@ -306,11 +306,11 @@ p a:hover {
 }
 
 .tag {
-    background-color: rgba(16, 185, 129, 0.08); /* سبز ترانسپرنت */
-    color: var(--accent-color);
-    border: 1px solid rgba(16, 185, 129, 0.2);
+    background-color: var(--pill-hover);
+    color: var(--text-main);
+    border: 2px solid var(--accent-color);
     padding: 0.4rem 0.9rem;
-    border-radius: 20px;
+    border-radius: 15px;
     font-size: 0.85rem;
     font-weight: 500;
     transition: all 0.2s ease;
@@ -318,8 +318,8 @@ p a:hover {
 }
 
 .tag:hover {
-    background-color: rgba(16, 185, 129, 0.15);
-    border-color: rgba(16, 185, 129, 0.4);
+    background-color: var(--pill-hover);
+    border-color: var(--accent-color);
     transform: translateY(-2px);
 }
 
