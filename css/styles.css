@@ -354,7 +354,172 @@ p a:hover {
     color: #888;
     margin-bottom: 0.5rem;
 }
+/* ==========================================================================
+   Education List Items
+   ========================================================================== */
+   .section-title{
+        font-size:1.8rem;
+        margin-bottom:2rem;
+    }
 
+    .education-card{
+
+        position:relative;
+
+        display:flex;
+        gap:2rem;
+
+        padding:2rem;
+
+        border:1px solid var(--border-color);
+
+        border-radius:14px;
+
+        background:rgba(255,255,255,.02);
+
+        transition:.35s;
+
+        overflow:hidden;
+    }
+
+    .education-card:hover{
+
+        transform:translateY(-4px);
+
+        border-color:rgba(255,255,255,.18);
+
+        background:rgba(255,255,255,.03);
+    }
+
+    .education-line{
+
+        position:absolute;
+
+        left:35px;
+        top:0;
+        bottom:0;
+
+        width:2px;
+
+        background:linear-gradient(
+            to bottom,
+            transparent,
+            var(--accent-color),
+            transparent
+        );
+    }
+
+    .education-logo{
+
+        width:70px;
+        height:70px;
+
+        border-radius:14px;
+
+        background:#1c1c1c;
+
+        display:flex;
+
+        justify-content:center;
+        align-items:center;
+
+        flex-shrink:0;
+
+        z-index:2;
+    }
+
+    .education-logo img{
+
+        width:48px;
+        height:48px;
+        object-fit:contain;
+    }
+
+    .education-content{
+
+        flex:1;
+    }
+
+    .education-header{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:flex-start;
+
+        gap:2rem;
+
+        margin-bottom:1rem;
+    }
+
+    .education-header h3{
+
+        font-size:1.35rem;
+
+        margin-bottom:.3rem;
+    }
+
+    .education-university{
+
+        color:#9ca3af;
+
+        font-size:.95rem;
+    }
+
+    .education-date{
+
+        color:#a1a1aa;
+
+        font-size:.9rem;
+
+        white-space:nowrap;
+    }
+
+    .education-description{
+
+        color:#d4d4d4;
+
+        margin-bottom:1.3rem;
+
+        line-height:1.8;
+    }
+
+    .education-tags{
+
+        display:flex;
+
+        flex-wrap:wrap;
+
+        gap:.7rem;
+    }
+
+    .education-tags span{
+
+        padding:.35rem .85rem;
+
+        border-radius:999px;
+
+        border:1px solid var(--border-color);
+
+        background:#1a1a1a;
+
+        font-size:.82rem;
+
+        color:#bdbdbd;
+
+        transition:.3s;
+    }
+
+    .education-tags span:hover{
+
+        border-color:var(--accent-color);
+
+        color:white;
+    }
+    .education-card + .education-card {
+        margin-top: 1.5rem;
+    }
 /* ==========================================================================
    Responsive
    ========================================================================== */
