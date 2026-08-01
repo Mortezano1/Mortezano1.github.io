@@ -148,7 +148,7 @@ p a:hover {
    ========================================================================== */
 .container {
   max-width: 1400px;
-  margin: 4rem auto;
+  margin: 3rem auto;
   padding: 0 2rem;
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -255,7 +255,7 @@ p a:hover {
 }
 
 .section-block {
-  margin-bottom: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .section-block h2 {
@@ -271,14 +271,14 @@ p a:hover {
   background-color: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
   border-left: 3px solid var(--accent-color);
-  padding: 1.2rem 1.5rem;
+  padding: 0.5rem 1.2rem;
   border-radius: 6px;
 }
 
 .role-card .role-title {
   font-size: 1.1rem;
   color: var(--text-heading);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
 }
 
 .role-card .role-company {
@@ -369,7 +369,7 @@ p a:hover {
    ========================================================================== */
 
 .section-title {
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
 }
 
@@ -425,8 +425,8 @@ p a:hover {
 }
 
 .education-logo img {
-  width: 48px;
-  height: 48px;
+  width: 70px;
+  height: 70px;
   object-fit: contain;
 }
 
