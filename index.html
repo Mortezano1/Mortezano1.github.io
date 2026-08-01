@@ -20,7 +20,7 @@
           <button class="tab-link" onclick="openTab(event, 'experience')">
             Experience
           </button>
-          <button class="tab-link" onclick="openTab(event, 'projects')">
+          <button class="tab-link" onclick="openTab(event, 'Research')">
             Research
           </button>
           <button class="tab-link" onclick="openTab(event, 'skills')">
@@ -193,35 +193,51 @@
         </section>
 
         <section id="education" class="tab-content">
-          <h2 class="section-title">Education</h2>
+          <div class="education-section-head">
+            <div>
+              <h2 class="section-title">Education</h2>
+              <!-- <p class="section-kicker">ACADEMIC BACKGROUND</p> -->
+            </div>
+
+            <div class="education-head-line"></div>
+          </div>
 
           <div class="education-timeline">
-            <div class="education-card">
+            <!-- Master's degree -->
+            <article class="education-card education-card-featured">
               <div class="education-marker">
                 <div class="education-logo">
-                  <img src="assets/images/sharif.png" alt="Sharif University" />
+                  <img
+                    src="assets/images/sharif.png"
+                    alt="Sharif University of Technology logo"
+                  />
                 </div>
               </div>
 
               <div class="education-content">
                 <div class="education-header">
                   <div>
+                    <!-- <div class="degree-label">GRADUATE DEGREE</div> -->
                     <h3>M.Sc. in Energy System Engineering</h3>
                     <p class="education-university">
                       Sharif University of Technology
                     </p>
                   </div>
+
                   <span class="education-date">2020 — 2023</span>
                 </div>
 
                 <div class="thesis-box">
-                  <div class="thesis-title">
-                    <strong>Master's Thesis</strong>
-                  </div>
+                  <!-- <div class="thesis-topline">
+                    <span class="thesis-icon">↗</span>
+                    <strong>MASTER'S THESIS</strong>
+                  </div> -->
+
                   <h4>
                     Security Analysis and Reliability Evaluation of Energy
                     Internet
                   </h4>
+
                   <p>
                     Developed a probabilistic framework for reliability
                     assessment of Energy Internet architectures under
@@ -230,11 +246,12 @@
                     Carlo simulation to evaluate network resilience and identify
                     critical elements.
                   </p>
+
                   <a
                     href="/research/probabilistic-energy-routing"
                     class="thesis-link"
                   >
-                    Explore research →
+                    Explore research <span>→</span>
                   </a>
                 </div>
 
@@ -244,21 +261,27 @@
                   <span>Probabilistic Modeling</span>
                 </div>
               </div>
-            </div>
+            </article>
 
-            <div class="education-card education-card-small">
+            <!-- Bachelor's degree -->
+            <article class="education-card education-card-small">
               <div class="education-marker">
                 <div class="education-logo">
-                  <img src="assets/images/arak.png" alt="Arak University" />
+                  <img
+                    src="assets/images/arak.png"
+                    alt="Arak University logo"
+                  />
                 </div>
               </div>
 
               <div class="education-content">
                 <div class="education-header">
                   <div>
+                    <!-- <div class="degree-label">UNDERGRADUATE DEGREE</div> -->
                     <h3>B.Sc. in Physics</h3>
                     <p class="education-university">Arak University</p>
                   </div>
+
                   <span class="education-date">2015 — 2020</span>
                 </div>
 
@@ -275,35 +298,73 @@
                   <span>Scientific Computing</span>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </section>
 
         <section id="experience" class="tab-content">
-          <h2>Experience</h2>
-          <div class="list-item">
-            <div class="item-meta">Sep 2025 – Present</div>
-            <div class="item-details">
-              <h3>Digital Energy Engineer</h3>
-              <p class="institution">SedraTak</p>
-              <p>
-                Developing the energy intelligence layer of an AI-powered
-                photovoltaic power plant monitoring platform.
-              </p>
+          <div class="education-section-head">
+            <div>
+              <!-- <p class="section-kicker">WORK HISTORY</p> -->
+              <h2 class="section-title">Experience</h2>
             </div>
+            <div class="education-head-line"></div>
           </div>
-          <div class="list-item">
-            <div class="item-meta">Jan 2025 – Aug 2025</div>
-            <div class="item-details">
-              <h3>Applied Energy Analyst</h3>
-              <p class="institution">
-                Sharif Energy, Water and Environment Institute
-              </p>
-              <p>
-                Led the development of a green building roadmap through
-                comprehensive energy auditing and simulation.
-              </p>
-            </div>
+
+          <div class="education-timeline">
+            <!-- Job 1 -->
+            <article class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span class="date-start">2025</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">NOW</span>
+                </div>
+              </div>
+
+              <div class="education-content">
+                <div class="education-header">
+                  <div>
+                    <div class="degree-label">CURRENT ROLE</div>
+                    <h3>Digital Energy Engineer</h3>
+                    <p class="education-university">SedraTak</p>
+                  </div>
+                </div>
+                <p class="education-description">
+                  Developing the energy intelligence layer of an AI-powered
+                  photovoltaic power plant monitoring platform, focusing on
+                  real-time optimization and system reliability.
+                </p>
+              </div>
+            </article>
+
+            <!-- Job 2 -->
+            <article class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span class="date-start">2025</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end">2025</span>
+                </div>
+              </div>
+
+              <div class="education-content">
+                <div class="education-header">
+                  <div>
+                    <div class="degree-label">RESEARCH POSITION</div>
+                    <h3>Applied Energy Analyst</h3>
+                    <p class="education-university">
+                      Sharif Energy, Water and Environment Institute
+                    </p>
+                  </div>
+                </div>
+                <p class="education-description">
+                  Led the development of a green building roadmap through
+                  comprehensive energy auditing, simulation, and data-driven
+                  performance evaluation.
+                </p>
+              </div>
+            </article>
           </div>
         </section>
 
@@ -313,9 +374,141 @@
           <p><strong>Energy Modeling:</strong> EnergyPlus, PVsyst, GAMS</p>
         </section>
 
-        <section id="projects" class="tab-content">
-          <h2>Projects</h2>
-          <p>Content for projects goes here...</p>
+        <section id="Research" class="tab-content">
+          <!-- هدر هماهنگ با بخش‌های قبلی -->
+          <div class="education-section-head">
+            <div>
+              <p class="section-kicker">SCIENTIFIC CONTRIBUTIONS</p>
+              <h2 class="section-title">Research</h2>
+            </div>
+            <div class="education-head-line"></div>
+          </div>
+
+          <!-- شبکه کارت‌های پژوهشی (۳ ستونه) -->
+          <div class="research-grid">
+            <!-- کارت اول -->
+            <article class="research-card">
+              <div class="research-image-wrapper">
+                <img
+                  src="assets/images/research-routing.jpg"
+                  alt="Probabilistic Energy Routing"
+                  class="research-image"
+                />
+                <div class="research-tag">ENERGY INTERNET</div>
+              </div>
+              <div class="research-info">
+                <h3 class="research-card-title">
+                  Probabilistic Energy Routing
+                </h3>
+                <p class="research-card-summary">
+                  Developing reliable routing frameworks for Energy Internet
+                  platforms, leveraging probabilistic modeling to manage load
+                  uncertainty.
+                </p>
+
+                <!-- بخش لینک و جزئیات تکمیلی مشابه تز آموزش -->
+                <div class="research-action-area">
+                  <a
+                    href="/research/probabilistic-energy-routing"
+                    class="thesis-link"
+                  >
+                    <span>Read Publication</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- کارت دوم -->
+            <article class="research-card">
+              <div class="research-image-wrapper">
+                <img
+                  src="assets/images/research-reliability.jpg"
+                  alt="PV Reliability Assessment"
+                  class="research-image"
+                />
+                <div class="research-tag">RELIABILITY</div>
+              </div>
+              <div class="research-info">
+                <h3 class="research-card-title">PV Reliability Assessment</h3>
+                <p class="research-card-summary">
+                  Fault Detection and Diagnosis (FDD) algorithms for large-scale
+                  photovoltaic installations, optimizing operational lifetime.
+                </p>
+                <div class="research-action-area">
+                  <a href="/research/pv-reliability" class="thesis-link">
+                    <span>Read Project Details</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- کارت سوم -->
+            <article class="research-card">
+              <div class="research-image-wrapper">
+                <img
+                  src="assets/images/research-quantum.jpg"
+                  alt="Quantum Thermodynamics"
+                  class="research-image"
+                />
+                <div class="research-tag">PHYSICS</div>
+              </div>
+              <div class="research-info">
+                <h3 class="research-card-title">Quantum Thermodynamics</h3>
+                <p class="research-card-summary">
+                  Investigating fundamental quantum mechanics limits on energy
+                  exchange and thermal equilibrium in micro-scale routing
+                  devices.
+                </p>
+                <div class="research-action-area">
+                  <a href="/research/quantum-thermo" class="thesis-link">
+                    <span>Explore Theory</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7"></line>
+                      <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
         </section>
       </div>
     </main>
