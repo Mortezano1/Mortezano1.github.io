@@ -24,3 +24,12 @@ function openTab(evt, tabName) {
     }
   }
 }
+
+document.querySelectorAll("#skillTree .skill-branch-toggle").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const branch = btn.closest(".skill-branch");
+    const isOpen = branch.getAttribute("data-open") === "true";
+    branch.setAttribute("data-open", String(!isOpen));
+    btn.setAttribute("aria-expanded", String(!isOpen));
+  });
+});
