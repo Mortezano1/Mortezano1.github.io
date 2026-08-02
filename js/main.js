@@ -33,3 +33,15 @@ document.querySelectorAll("#skillTree .skill-branch-toggle").forEach((btn) => {
     btn.setAttribute("aria-expanded", String(!isOpen));
   });
 });
+
+function toggleAbstract(button) {
+  const content = button
+    .closest(".publication-body")
+    .querySelector(".abstract-content");
+
+  const isOpen = content.classList.toggle("active");
+
+  button.classList.toggle("is-open", isOpen);
+  button.setAttribute("aria-expanded", String(isOpen));
+  button.textContent = isOpen ? "Hide Abstract" : "Abstract";
+}
