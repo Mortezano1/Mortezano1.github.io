@@ -17,6 +17,9 @@
           <button class="tab-link" onclick="openTab(event, 'education')">
             Education
           </button>
+          <button class="tab-link" onclick="openTab(event, 'Research')">
+            Research
+          </button>
           <button class="tab-link" onclick="openTab(event, 'publications')">
             Publications
           </button>
@@ -25,9 +28,6 @@
           </button>
           <button class="tab-link" onclick="openTab(event, 'teaching')">
             Teaching
-          </button>
-          <button class="tab-link" onclick="openTab(event, 'Research')">
-            Research
           </button>
           <button class="tab-link" onclick="openTab(event, 'skills')">
             Skills
@@ -455,24 +455,15 @@
         </section>
 
         <section id="skills" class="tab-content">
-          <div class="education-section-head">
-            <div>
-              <h2 class="section-title">Skills & Expertise</h2>
-            </div>
-            <div class="education-head-line"></div>
-          </div>
-
           <div class="skill-tree" id="skillTree">
             <div class="skill-tree-trunk"></div>
 
             <ul class="skill-branch-list">
+              <!-- Energy Engineering -->
               <li class="skill-branch" data-index="01">
                 <button class="skill-branch-toggle" aria-expanded="false">
                   <span class="skill-branch-dot"></span>
-                  <!-- <span class="skill-branch-index">01</span> -->
-                  <span class="skill-branch-label"
-                    >Energy Systems Engineering</span
-                  >
+                  <span class="skill-branch-label">Energy Engineering</span>
                   <span class="skill-branch-caret">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                       <path
@@ -485,20 +476,9 @@
                     </svg>
                   </span>
                 </button>
+
                 <div class="skill-leaf-wrapper">
                   <ul class="skill-leaf-list">
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Renewable Energy Systems</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >PV Performance & Degradation</span
-                      >
-                    </li>
                     <li>
                       <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
@@ -507,38 +487,40 @@
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
+                      ><span class="skill-leaf-text">Photovoltaic Systems</span>
+                    </li>
+                    <li>
+                      <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >DERs, Microgrids & Energy Routing</span
+                        >Distributed Energy Resources</span
                       >
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >Reliability, Resilience & Risk Analysis</span
+                        >Power System Reliability</span
                       >
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Energy Storage & Multi-Energy Systems</span
-                      >
+                      ><span class="skill-leaf-text">Energy Storage</span>
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >Building Energy Performance</span
+                        >Building Energy Systems</span
                       >
                     </li>
                   </ul>
                 </div>
               </li>
 
+              <!-- Artificial Intelligence -->
               <li class="skill-branch" data-index="02">
                 <button class="skill-branch-toggle" aria-expanded="false">
                   <span class="skill-branch-dot"></span>
-                  <!-- <span class="skill-branch-index">02</span> -->
                   <span class="skill-branch-label"
-                    >AI, Machine Learning & Advanced Analytics</span
+                    >Artificial Intelligence</span
                   >
                   <span class="skill-branch-caret">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -552,61 +534,46 @@
                     </svg>
                   </span>
                 </button>
+
                 <div class="skill-leaf-wrapper">
                   <ul class="skill-leaf-list">
                     <li>
                       <span class="skill-leaf-connector"></span
+                      ><span class="skill-leaf-text">Machine Learning</span>
+                    </li>
+                    <li>
+                      <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >ML for Energy Applications</span
+                        >Time-Series Forecasting</span
                       >
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >Forecasting, FDD & Predictive Maintenance</span
+                        >Fault Detection & Diagnosis</span
                       >
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Anomaly Detection & Industrial Analytics</span
-                      >
+                      ><span class="skill-leaf-text">Anomaly Detection</span>
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Data-Driven & Graph-Based Modeling</span
-                      >
+                      ><span class="skill-leaf-text">Predictive Analytics</span>
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Time-Series & SCADA Analytics</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >TensorFlow, PyTorch, Scikit-learn</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >XGBoost, Random Forest & Statistical Learning</span
-                      >
+                      ><span class="skill-leaf-text">Deep Learning</span>
                     </li>
                   </ul>
                 </div>
               </li>
 
+              <!-- Scientific Computing -->
               <li class="skill-branch" data-index="03">
                 <button class="skill-branch-toggle" aria-expanded="false">
                   <span class="skill-branch-dot"></span>
-                  <!-- <span class="skill-branch-index">03</span> -->
-                  <span class="skill-branch-label"
-                    >Optimization, Modeling & Computational Methods</span
-                  >
+                  <span class="skill-branch-label">Mathematical Modeling</span>
                   <span class="skill-branch-caret">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                       <path
@@ -619,66 +586,51 @@
                     </svg>
                   </span>
                 </button>
+
                 <div class="skill-leaf-wrapper">
                   <ul class="skill-leaf-list">
                     <li>
                       <span class="skill-leaf-connector"></span
+                      ><span class="skill-leaf-text">Optimization</span>
+                    </li>
+                    <li>
+                      <span class="skill-leaf-connector"></span
+                      ><span class="skill-leaf-text">Stochastic Modeling</span>
+                    </li>
+                    <li>
+                      <span class="skill-leaf-connector"></span
+                      ><span class="skill-leaf-text">Graph Theory</span>
+                    </li>
+                    <li>
+                      <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >Stochastic & Robust Optimization</span
+                        >Monte Carlo Simulation</span
                       >
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >MILP, Nonlinear & Dynamic Programming</span
+                        >Uncertainty Quantification</span
                       >
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Evolutionary & Multi-Objective Optimization</span
-                      >
+                      ><span class="skill-leaf-text">Network Modeling</span>
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Monte Carlo & Uncertainty Quantification</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Scenario Generation & Probabilistic Modeling</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Graph Theory & Network Modeling</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Clustering & Intelligent Coordination</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Python, MATLAB, R & Fortran</span
-                      >
+                      ><span class="skill-leaf-text">Multi-Agent Systems</span>
                     </li>
                   </ul>
                 </div>
               </li>
 
+              <!-- Software & Data Engineering -->
               <li class="skill-branch" data-index="04">
                 <button class="skill-branch-toggle" aria-expanded="false">
                   <span class="skill-branch-dot"></span>
-                  <!-- <span class="skill-branch-index">04</span> -->
                   <span class="skill-branch-label"
-                    >Software, Data & Digital Platforms</span
+                    >Software & Data Engineering</span
                   >
                   <span class="skill-branch-caret">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
@@ -692,51 +644,36 @@
                     </svg>
                   </span>
                 </button>
+
                 <div class="skill-leaf-wrapper">
                   <ul class="skill-leaf-list">
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >FastAPI & Python Backend Development</span
-                      >
+                      ><span class="skill-leaf-text">Python & FastAPI</span>
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >REST APIs, Clean Architecture & DDD</span
+                        >PostgreSQL & TimescaleDB</span
                       >
+                    </li>
+                    <li>
+                      <span class="skill-leaf-connector"></span
+                      ><span class="skill-leaf-text">REST APIs</span>
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
                       ><span class="skill-leaf-text"
-                        >PostgreSQL, TimescaleDB & SQL</span
+                        >SCADA Data Processing</span
                       >
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Telemetry Pipelines & SCADA Data Processing</span
-                      >
+                      ><span class="skill-leaf-text">Docker & Linux</span>
                     </li>
                     <li>
                       <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text">Kafka & RabbitMQ</span>
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Real-Time Monitoring & KPI Analytics</span
-                      >
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text">Docker, Linux & Git</span>
-                    </li>
-                    <li>
-                      <span class="skill-leaf-connector"></span
-                      ><span class="skill-leaf-text"
-                        >Technical Documentation & Deployment Practices</span
-                      >
+                      ><span class="skill-leaf-text">Git</span>
                     </li>
                   </ul>
                 </div>
@@ -894,6 +831,45 @@
 
             <ul class="publication-list">
               <li class="publication-item">
+                <span class="publication-year">Ongoing</span>
+
+                <div class="publication-body">
+                  <h3 class="publication-title">
+                    Enhancing Energy Internet Efficiency: Probabilistic Energy
+                    Routing and Reliability Assessment Using Graph Theory
+                  </h3>
+
+                  <p class="publication-authors">
+                    <strong>M. Kolivandi</strong> and A. R. Ghahnavieh
+                  </p>
+
+                  <p class="publication-venue">
+                    <em>In preparation</em>
+                  </p>
+
+                  <div class="publication-links">
+                    <button
+                      type="button"
+                      class="publication-link abstract-btn"
+                      aria-expanded="false"
+                      onclick="toggleAbstract(this)"
+                    >
+                      Abstract
+                    </button>
+                  </div>
+
+                  <div class="abstract-content">
+                    <p>
+                      This ongoing research develops a graph-theoretic framework
+                      for probabilistic energy routing in local Energy Internet
+                      systems. The study aims to improve operational efficiency
+                      while assessing network reliability under uncertain
+                      generation, demand, and component availability.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="publication-item">
                 <span class="publication-year">2025</span>
 
                 <div class="publication-body">
@@ -934,51 +910,36 @@
 
                   <div class="abstract-content">
                     <p>
-                      This preprint investigates fault detection in CO2
-                      refrigeration systems using tree-based machine-learning
-                      methods. It examines optimal sensor selection and
-                      evaluates model robustness under noise, uncertainty, and
-                      varying operating conditions.
-                    </p>
-                  </div>
-                </div>
-              </li>
-
-              <li class="publication-item">
-                <span class="publication-year">Ongoing</span>
-
-                <div class="publication-body">
-                  <h3 class="publication-title">
-                    Enhancing Energy Internet Efficiency: Probabilistic Energy
-                    Routing and Reliability Assessment Using Graph Theory
-                  </h3>
-
-                  <p class="publication-authors">
-                    <strong>M. Kolivandi</strong> and A. R. Ghahnavieh
-                  </p>
-
-                  <p class="publication-venue">
-                    <em>In preparation</em>
-                  </p>
-
-                  <div class="publication-links">
-                    <button
-                      type="button"
-                      class="publication-link abstract-btn"
-                      aria-expanded="false"
-                      onclick="toggleAbstract(this)"
-                    >
-                      Abstract
-                    </button>
-                  </div>
-
-                  <div class="abstract-content">
-                    <p>
-                      This ongoing research develops a graph-theoretic framework
-                      for probabilistic energy routing in local Energy Internet
-                      systems. The study aims to improve operational efficiency
-                      while assessing network reliability under uncertain
-                      generation, demand, and component availability.
+                      This study investigates the reliability and robustness of
+                      data-driven Fault Detection and Diagnosis (FDD) models for
+                      CO2 refrigeration systems (CO2-RS) in supermarkets,
+                      focusing on optimal sensor selection and resilience
+                      against sensor noise. Employing tree-based machine
+                      learning algorithms—Random Forest (RF), XGBoost, CatBoost,
+                      and LightGBM—we developed FDD models to classify six
+                      common faults in a laboratory-scale CO2-RS. The Recursive
+                      Feature Addition (RFA) approach identified optimal sensor
+                      sets, achieving a 99% F1-score with minimal sensors: four
+                      for RF, seven for XGBoost, five for CatBoost, and five for
+                      LightGBM. Condenser-side sensors consistently ranked as
+                      critical for fault detection. Robustness was assessed by
+                      injecting Additive White Gaussian Noise (AWGN) at a
+                      signal-to-noise ratio (SNR) of 3 dB into the most
+                      important sensor, with XGBoost demonstrating superior
+                      resilience at 85.24%, followed by CatBoost (57.07%),
+                      LightGBM (49.1%), and RF (49.46%). Sensitivity analysis
+                      across high-SNR (10 dB), low-SNR (0 dB), and sensor
+                      failure scenarios revealed XGBoost’s robustnesspeaking at
+                      90.23% and retaining 79% under failure, contrasting with
+                      sharper declines in other models. These findings highlight
+                      a trade-off between sensor count, cost, and reliability,
+                      with larger ensembles enhancing noise resilience. This
+                      work bridges gaps in FDD literature by integrating sensor
+                      optimization with comprehensive robustness analysis,
+                      offering a practical framework for improving energy
+                      efficiency and fault management in CO2-RS. Future efforts
+                      could explore adaptive SNR thresholds and redundant sensor
+                      configurations to enhance real-world applicability.
                     </p>
                   </div>
                 </div>
@@ -1034,11 +995,30 @@
 
                   <div class="abstract-content">
                     <p>
-                      This study evaluates engineering approaches for improving
-                      the thermal performance of evacuated-tube solar
-                      collectors. It investigates the influence of preheater
-                      incorporation and operating conditions on collector
-                      efficiency and useful heat output.
+                      Solar irradiation is a clean form of energy, and
+                      absorption cooling systems powered by solar energy allow
+                      for significant energy savings. In the future, the demand
+                      for renewable energy may be the most effective way to
+                      serve clean energy, especially in Iraq, which has an
+                      excellent geographical location. In this research work,
+                      the performances of solar collector with and without of
+                      preheater have been evaluated. When compared to flat plate
+                      collectors at temperatures above 80°C, glass evacuated
+                      tube solar collectors provide the combined effects of a
+                      highly selective surface coating and vacuum insulation of
+                      the absorber element, resulting in a high heat extraction
+                      efficiency. Firstly, the Evacuated Vacuum Tube Solar
+                      Collector (EVTSC) was tested through experimentation.
+                      Secondly, Computational Fluid Dynamics (CFD) approach has
+                      been involved in this EVTSC system and thereby the
+                      conductive, convective and radiation based heat transfers
+                      are computed. Additionally, all possible with inclusive
+                      preheater cases are computationally investigated,
+                      thereafter the comprehensive report is prepared though
+                      validated computational procedures. Finally, the maximum
+                      efficiency is observed to be 53% without using a preheater
+                      and 61.8% with the usage of the preheater. The increase in
+                      efficiency using the preheater is found to be 16.6%.
                     </p>
                   </div>
                 </div>
@@ -1095,11 +1075,32 @@
 
                   <div class="abstract-content">
                     <p>
-                      This paper presents a probabilistic energy-routing
-                      algorithm for local Energy Internet networks. The proposed
-                      method models uncertainty in energy paths and system
-                      components to support a more informed and practical
-                      reliability assessment.
+                      Energy systems require a network to effectively connect
+                      various technologies and ensure correct integration from
+                      supply to demand for maximum utilization as technologies
+                      advance at an increasing rate. The Energy Internet (EI)
+                      concept has been developed as a framework for
+                      interconnecting all the technologies which aims to enhance
+                      energy transmission efficiency and optimize power
+                      dispatching. Since the Energy Router (ER) is the main
+                      equipment for the EI, adoption of an effective energy
+                      routing algorithm is crucial for efficient power
+                      transmission across the EI network. This study proposes a
+                      Probabilistic Energy Routing (PER) that determines the
+                      optimal route based on the probability of failure and
+                      reliability indices for further evaluation. The
+                      significance of this issue becomes noticeable during
+                      critical power transmission, such as when delivering
+                      energy to hospitals. The PER method considers the
+                      challenges of congestion management, failure in power
+                      transmission lines, and ERs, which can have multiple
+                      sources, and solves the problem as a whole in cases of
+                      transmission from several suppliers. To improve the
+                      simulation in electricity transmission lines, a load is
+                      effectively represented by the normal distribution
+                      function. Subsequently, case evaluations that demonstrate
+                      the applicability of the suggested strategy are used to
+                      validate the routing system.
                     </p>
                   </div>
                 </div>
@@ -1149,11 +1150,25 @@
 
                   <div class="abstract-content">
                     <p>
-                      This study compares building energy-efficiency evaluation
-                      through the ISO 13790 standard and EnergyPlus simulation.
-                      It discusses the strengths, limitations, and practical
-                      suitability of both approaches for assessing building
-                      energy performance.
+                      In light of global efforts to enhance building energy
+                      efficiency and foster sustainable practices, the
+                      establishment of standardized methodologies for evaluating
+                      energy performance has gained international attention. The
+                      study employs the ISO 13790 method to scrutinize monthly
+                      heating energy calculations, with rigorous validation
+                      through dynamic simulation using EnergyPlus software.
+                      Focusing on the Energy faculty at Sharif University of
+                      Technology as a case study, the study unveils significant
+                      disparities between the heating energy estimations derived
+                      from the ISO 13790 standard and dynamic simulation.
+                      Intriguingly, this investigation extends its purview to
+                      diverse geographic contexts, encompassing the cities of
+                      Tehran, Tabriz, and Kashan, as well as orientations in all
+                      four cardinal directions. The findings, assessed using
+                      relative error and root mean square error metrics,
+                      illuminate the variances in computed energy demands,
+                      providing valuable insights into the accuracy of the ISO
+                      13790 approach.
                     </p>
                   </div>
                 </div>
@@ -1193,11 +1208,38 @@
 
                   <div class="abstract-content">
                     <p>
-                      This paper explores numerical and analytical approaches
-                      for evaluating the reliability of energy-routing
-                      algorithms in Energy Internet systems. The analysis
-                      provides a foundation for identifying reliable routing
-                      strategies under different network configurations.
+                      The Energy Internet (EI) is a comprehensive and integrated
+                      system that encompasses various aspects of energy
+                      production, storage, transmission, conversion, and
+                      utilization. It involves a diverse set of technologies
+                      such as resources, devices, equipment, systems,
+                      communication, and information. A suitable index
+                      evaluation method that covers three dimensions: energy,
+                      economy, and network-system needs to be established to
+                      evaluate the performance and development of the EI in
+                      different regions and scenarios. Such a method can provide
+                      guidance and feedback for the optimization and
+                      sustainability of the EI. In this article, one aspect of
+                      the index evaluation method is focused on: the reliability
+                      assessment of a local EI that incorporates multiple energy
+                      systems. The power system is considered as the core
+                      component of the local EI and its interaction with other
+                      energy systems such as heat and gas are examined. The
+                      problem of power transmission failures that may occur due
+                      to various factors such as weather conditions and
+                      equipment faults. A reliability assessment method that
+                      considers multiple power suppliers with different
+                      transmission paths and load distributions is proposed
+                      which is assessed through Monte Carlo simulation and
+                      Markov model. The normal distribution function is used to
+                      model the load fluctuations in each transmission line and
+                      the power allocation among different paths is optimized.
+                      the case study is then presented to demonstrate the
+                      effectiveness and applicability of the proposed method.
+                      The results show that by using two transmission paths with
+                      equal power ratios, the power loss can be significantly
+                      reduced and the reliability of power delivery can be
+                      improved when there is a high load demand on the lines.
                     </p>
                   </div>
                 </div>
