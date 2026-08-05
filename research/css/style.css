@@ -882,6 +882,24 @@ html {
 .section-block {
   scroll-margin-top: 6.5rem;
 }
+/* Active state for scroll spy */
+.research-section-nav-link.is-active {
+  color: #ffffff;
+  transform: translateX(3px);
+}
+
+.research-section-nav-link.is-active .research-section-dot {
+  border-color: rgba(205, 174, 224, 0.95);
+  background: var(--accent-color);
+  box-shadow:
+    0 0 0 4px rgba(105, 68, 124, 0.22),
+    0 0 18px rgba(167, 139, 186, 0.32);
+}
+
+.research-section-nav-link.is-active span:last-child {
+  color: #ffffff;
+  font-weight: 700;
+}
 
 /* Responsive */
 @media (max-width: 980px) {
@@ -923,6 +941,12 @@ html {
     transform: translateY(-1px);
     background: rgba(105, 68, 124, 0.18);
     border-color: rgba(167, 139, 186, 0.5);
+  }
+  .research-section-nav-link.is-active {
+    transform: translateY(-1px);
+    background: rgba(105, 68, 124, 0.28);
+    border-color: rgba(205, 174, 224, 0.62);
+    color: #ffffff;
   }
 
   .research-section-dot {
