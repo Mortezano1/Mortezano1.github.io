@@ -3,134 +3,1014 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Probabilistic Energy Routing | Morteza Kolivandi</title>
+    <meta
+      name="description"
+      content="Research showcase for Probabilistic Energy Routing and reliability assessment in local Energy Internet networks."
+    />
 
-    <link rel="stylesheet" href="/css/styles.css" />
+    <!-- Main research stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- KaTeX for mathematical formulas -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"
+    ></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+      onload="renderMathInElement(document.body)"
+    ></script>
   </head>
 
   <body>
+    <!-- Navigation -->
     <nav class="navbar">
       <div class="nav-left">
-        <a href="/" class="nav-brand">Morteza Kolivandi</a>
+        <a href="../../index.html" class="nav-brand">Morteza Kolivandi</a>
       </div>
-
       <div class="nav-right">
-        <a href="/">← Back to website</a>
+        <a href="../../index.html" class="tab-link">← Back to Portfolio</a>
       </div>
     </nav>
 
-    <main class="container single-column">
-      <section class="content-area">
-        <div class="education-section-head">
-          <div>
-            <p class="section-kicker">MASTER'S THESIS</p>
-            <h1 class="section-title">
-              Probabilistic Energy Routing for Reliability Evaluation of Energy
-              Internet
-            </h1>
-          </div>
-
-          <div class="education-head-line"></div>
-        </div>
-
-        <div class="thesis-box">
-          <div class="thesis-topline">
-            <span class="thesis-icon">🎓</span>
-            <span>SHARIF UNIVERSITY OF TECHNOLOGY</span>
-          </div>
-
-          <h4>M.Sc. Thesis in Energy Systems Engineering</h4>
-
-          <p>
-            This research introduces a probabilistic energy routing framework
-            for Energy Internet architectures considering uncertainties in
-            renewable generation, electrical demand, and transmission line
-            availability.
-          </p>
-        </div>
-
-        <div class="education-tags">
-          <span>Energy Internet</span>
-          <span>Reliability</span>
-          <span>Graph Theory</span>
-          <span>Monte Carlo</span>
-          <span>Optimization</span>
-          <span>Python</span>
-        </div>
-
+    <div class="container single-column">
+      <main class="content-area">
+        <!-- Hero -->
         <section class="section-block">
-          <h2>Overview</h2>
+          <h1 class="profile-name">
+            Probabilistic Energy Routing for Reliable Energy Internet Networks
+          </h1>
 
-          <p>
-            Energy Internet is expected to support large-scale integration of
-            renewable energy resources. However, uncertainty in distributed
-            generation and component failures makes deterministic routing
-            insufficient.
+          <p class="profile-subtitle">
+            A reliability-aware routing framework for local Energy Internet
+            networks under uncertain demand, component failures, congestion, and
+            transmission losses.
           </p>
 
-          <p>
-            This thesis proposes a Probabilistic Energy Routing (PER) algorithm
-            capable of selecting reliable energy paths while incorporating
-            stochastic behavior of loads, renewable generation, and network
-            failures.
-          </p>
+          <div class="thesis-box research-focus-box">
+            <h2 class="focus-title">Abstract</h2>
+
+            <p>
+              This research investigates reliability-aware energy routing in
+              <strong>Local Energy Internet</strong> networks, where distributed
+              energy resources, storage units, flexible loads, Energy Routers,
+              and information systems are interconnected through an intelligent
+              energy-sharing architecture. In this structure, energy and
+              information can flow in a coordinated and bidirectional manner,
+              enabling more adaptive operation of future energy systems.
+            </p>
+
+            <p>
+              The core contribution is a
+              <strong>Probabilistic Energy Routing (PER)</strong> framework that
+              evaluates candidate paths under uncertain demand, stochastic line
+              loading, congestion, transmission losses, capacity constraints,
+              line failures, and Energy Router failures. Instead of selecting
+              only the shortest or lowest-loss route, PER identifies the most
+              reliable feasible route under modeled operating conditions.
+            </p>
+
+            <p>
+              The framework combines
+              <strong>graph-based path analysis</strong>,
+              <strong>Monte Carlo simulation</strong>,
+              <strong>normal load modeling</strong>,
+              <strong>exponential failure modeling</strong>, and reliability
+              indices such as <strong>EENS</strong>, <strong>PCFSO</strong>, and
+              <strong>RRW</strong>. It was developed in the M.Sc. thesis and
+              further presented in the 2024 conference paper on probabilistic
+              energy routing in Local Energy Internet networks.
+            </p>
+
+            <div class="education-tags" style="margin-top: 1rem">
+              <span>Energy Internet</span>
+              <span>Probabilistic Energy Routing</span>
+              <span>Reliability Assessment</span>
+              <span>Monte Carlo Simulation</span>
+              <span>Graph Theory</span>
+            </div>
+          </div>
         </section>
 
+        <!-- Research Challenge -->
         <section class="section-block">
-          <h2>Research Contributions</h2>
+          <h2>Research Challenge</h2>
 
-          <ul class="role-list">
-            <li>
-              Introduced the Probabilistic Energy Routing (PER) algorithm.
-            </li>
+          <div class="research-grid">
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Dynamic Line Loading
+                </h3>
+                <p class="research-card-summary">
+                  Transmission-line loading changes over time due to uncertain
+                  demand, renewable generation, and network operating
+                  conditions. In this research, existing line load is modeled
+                  probabilistically using a normal distribution.
+                </p>
+              </div>
+            </article>
 
-            <li>
-              Developed stochastic models for electrical loads and line
-              failures.
-            </li>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Line and Router Failures
+                </h3>
+                <p class="research-card-summary">
+                  Lines and Energy Routers may fail because of equipment
+                  outages, disconnections, or operating stress. Their
+                  reliability is modeled using exponential failure distributions
+                  with constant failure rates during useful lifetime operation.
+                </p>
+              </div>
+            </article>
 
-            <li>Integrated Monte Carlo Simulation with routing analysis.</li>
-
-            <li>Evaluated reliability using EENS and RRW indices.</li>
-
-            <li>Validated the methodology on IEEE distribution systems.</li>
-          </ul>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Capacity and Loss Limits
+                </h3>
+                <p class="research-card-summary">
+                  A selected route must satisfy capacity constraints and
+                  acceptable transmission-loss limits. Congested or overloaded
+                  paths can increase the probability of failure and expected
+                  energy not supplied.
+                </p>
+              </div>
+            </article>
+          </div>
         </section>
 
+        <!-- Methodology -->
         <section class="section-block">
           <h2>Methodology</h2>
 
-          <p>
-            The framework combines graph-based routing, probabilistic component
-            modeling, and Monte Carlo simulation to estimate the reliability of
-            energy delivery under uncertainty.
-          </p>
+          <div class="education-timeline">
+            <div class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span>STEP</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">01</span>
+                </div>
+              </div>
+              <div class="education-content">
+                <span class="degree-label">GRAPH CONSTRUCTION</span>
+                <h3>Convert the Local Energy Internet into a graph</h3>
+                <p class="education-description">
+                  The network topology is modeled as a weighted graph in which
+                  Energy Routers are nodes and transmission lines are edges.
+                  This representation makes it possible to analyze routes,
+                  identify critical components, and evaluate system
+                  connectivity.
+                </p>
+                <div class="education-tags">
+                  <span>Graph Theory</span>
+                  <span>Topology Modeling</span>
+                  <span>Energy Routers</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span>STEP</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">02</span>
+                </div>
+              </div>
+              <div class="education-content">
+                <span class="degree-label">PATH ENUMERATION</span>
+                <h3>Identify possible routing paths using DFS</h3>
+                <p class="education-description">
+                  Depth-First Search is used to extract feasible paths between
+                  selected source and demand Energy Routers. These paths are not
+                  selected only by distance; they are later evaluated using
+                  probabilistic reliability criteria.
+                </p>
+                <div class="education-tags">
+                  <span>DFS</span>
+                  <span>Candidate Paths</span>
+                  <span>Source–Demand Routing</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span>STEP</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">03</span>
+                </div>
+              </div>
+              <div class="education-content">
+                <span class="degree-label">STOCHASTIC LOAD MODELING</span>
+                <h3>Model line loading under uncertainty</h3>
+                <p class="education-description">
+                  Existing power on transmission lines is sampled from a normal
+                  distribution. This allows the routing algorithm to consider
+                  realistic variations in line loading before adding new power
+                  transfer requests.
+                </p>
+                <div class="education-tags">
+                  <span>Normal Distribution</span>
+                  <span>Line Loading</span>
+                  <span>Uncertainty</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span>STEP</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">04</span>
+                </div>
+              </div>
+              <div class="education-content">
+                <span class="degree-label">FAILURE MODELING</span>
+                <h3>Evaluate line and Energy Router availability</h3>
+                <p class="education-description">
+                  Component failures are modeled using exponential reliability
+                  functions. A route is considered operational only when all
+                  essential lines and Energy Routers along the path remain
+                  available.
+                </p>
+                <div class="education-tags">
+                  <span>Exponential Distribution</span>
+                  <span>Failure Rate</span>
+                  <span>Series Reliability</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span>STEP</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">05</span>
+                </div>
+              </div>
+              <div class="education-content">
+                <span class="degree-label">MONTE CARLO ANALYSIS</span>
+                <h3>Simulate stochastic operating scenarios</h3>
+                <p class="education-description">
+                  Monte Carlo simulation is used to evaluate thousands of
+                  operating scenarios. The conference paper reports 10,000
+                  samples and 100 repetitions to reduce variance, while the
+                  thesis uses 10,000 scenarios for case-study evaluation.
+                </p>
+                <div class="education-tags">
+                  <span>10,000 Samples</span>
+                  <span>100 Repetitions</span>
+                  <span>Scenario Simulation</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
+        <!-- Mathematical Model -->
+        <section class="section-block">
+          <h2>Mathematical Formulation</h2>
+          <div class="thesis-box">
+            <div class="thesis-topline">
+              <span class="thesis-icon">◎</span>
+              <span>SYSTEM MODEL</span>
+            </div>
+
+            <h4>Energy Routers as network nodes</h4>
+
+            <p>
+              In the proposed Local Energy Internet model, each
+              <strong>Energy Router (ER)</strong> is represented as a network
+              node, while transmission links between routers are represented as
+              graph edges. This graph-based representation enables systematic
+              path discovery, reliability analysis, and routing evaluation.
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$G=(V,E,W)$$ $$w_{ij} = \begin{cases} l_{ij} & i \neq j \\ l_i &
+              i = j \\ \infty & [v_i, v_j] \notin E \end{cases}$$
+            </div>
+
+            <p style="margin-bottom: 2rem">
+              where \(V\) is the set of nodes or Energy Routers, \(E\) is the
+              set of transmission links, and \(W\) represents edge weights such
+              as loss, resistance, cost, or routing-related parameters.
+            </p>
+
+            <div class="thesis-topline">
+              <span class="thesis-icon">∑</span>
+              <span>PER MODEL</span>
+            </div>
+
+            <h4>Reliability-aware route evaluation</h4>
+            <p>
+              The PER framework selects the most reliable feasible route by
+              maximizing the probability that transmission losses remain within
+              the allowable limit, the transferred power stays within path
+              capacity, and all required components remain operational.
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$\operatorname*{Argmax}_{l \in M} \Pr\!\left(P_{loss,l}\leq
+              P_0,\; P^{tr}_{ij}\leq Cap_{l},\; \psi_{state,l}=1\right)$$
+            </div>
+
+            <p>
+              where \(M\) is the set of candidate paths, \(P_{loss,l}\) is the
+              power loss along path \(l\), \(P_0\) is the maximum allowable
+              power loss, \(P^{tr}_{ij}\) is the transmitted power on line
+              \(i-j\), \(Cap_l\) is the effective path capacity, and
+              \(\psi_{state,l}\) represents the operational state of the
+              selected path.
+            </p>
+            <p>
+              The total power loss of a candidate path is evaluated by combining
+              Energy Router conversion loss and transmission-line loss along the
+              selected route:
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$P_{loss,l}=\sum_{k_l=1}^{N}\left[(1-\eta_i)P_d+\frac{r_{ij}}{U_{ij}^{2}}
+              \left((P^{tr}_{ij})^{2}-P_{ex,ij}^{2}\right)\right]_{k_l}$$
+            </div>
+            <p>
+              The transferred power on a line is calculated by adding the new
+              demand request to the existing line power:
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$P^{tr}_{ij}=P^d+P^{ex}_{ij}$$
+            </div>
+
+            <p>
+              where \(P^d\) is the demanded power and \(P^{ex}_{ij}\) is the
+              existing power on line \(i-j\). The existing line power is modeled
+              using a normal distribution:
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$P^{ex}_{ij}\sim N(\mu_{ij},\sigma_{ij})$$
+            </div>
+
+            <p>
+              The effective capacity of a route segment is constrained by the
+              line capacity and the capacities of the connected Energy Routers:
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$Cap_l=\min(Cap_{ij},Cap_i,Cap_j)$$
+            </div>
+
+            <p>Therefore, a feasible transfer must satisfy:</p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$P^{tr}_{ij}\leq Cap_l$$
+            </div>
+
+            <p>
+              Component reliability is modeled using the exponential reliability
+              function:
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$R_i(t)=e^{-\lambda_i t}$$
+            </div>
+
+            <p>
+              For a series path, the route remains operational only if all
+              required components remain operational:
+            </p>
+
+            <div
+              style="
+                text-align: center;
+                margin: 1.5rem 0;
+                font-size: 1.15rem;
+                color: #ffffff;
+              "
+            >
+              $$R_s(t)=\prod_{i=1}^{N}R_i(t)$$
+            </div>
+          </div>
+        </section>
+
+        <!-- Reliability Metrics -->
+        <section class="section-block">
+          <h2>Reliability Metrics</h2>
+
+          <div class="research-grid">
+            <article class="research-card">
+              <div class="research-info">
+                <span class="degree-label">METRIC 01</span>
+                <h3 class="research-card-title">PCFSO</h3>
+                <p class="research-card-summary">
+                  <strong>
+                    Probability of Component Failure and System Outage
+                  </strong>
+                  measures the probability that a component failure leads to
+                  load curtailment or system outage.
+                </p>
+                <div
+                  style="
+                    text-align: center;
+                    margin-top: 1rem;
+                    color: #ffffff;
+                    font-size: 0.95rem;
+                  "
+                >
+                  $$PCFSO_i^h=Pr(P_h>0\ \text{and}\ \psi_{state,l}=0)$$
+                </div>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <div class="research-info">
+                <span class="degree-label">METRIC 02</span>
+                <h3 class="research-card-title">EENS / EENSCF</h3>
+                <p class="research-card-summary">
+                  <strong>Expected Energy Not Supplied</strong> quantifies the
+                  expected amount of energy that cannot be delivered. In the
+                  paper, EENSCF is used to evaluate expected unsupplied energy
+                  after component failure.
+                </p>
+                <div
+                  style="
+                    text-align: center;
+                    margin-top: 1rem;
+                    color: #ffffff;
+                    font-size: 0.95rem;
+                  "
+                >
+                  $$EENSCF_i^h=EENS_h \times PCFSO_i^h$$
+                </div>
+              </div>
+            </article>
+
+            <article class="research-card">
+              <div class="research-info">
+                <span class="degree-label">METRIC 03</span>
+                <h3 class="research-card-title">RRW</h3>
+                <p class="research-card-summary">
+                  <strong>Risk Reduction Worth</strong> ranks components based
+                  on their potential contribution to risk reduction and
+                  reliability improvement. .
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Simulation -->
+        <section class="section-block">
+          <h2>Simulation Setup</h2>
+
+          <div class="thesis-box">
+            <div class="thesis-topline">
+              <span class="thesis-icon">◈</span>
+              <span>MONTE CARLO SIMULATION</span>
+            </div>
+
+            <h4>Monte Carlo-based reliability evaluation</h4>
+
+            <p>
+              The stochastic behavior of the Local Energy Internet is evaluated
+              through repeated Monte Carlo simulations. Random variations in
+              line loading and component availability are used to estimate route
+              failure probabilities, expected energy not supplied, and component
+              criticality.
+            </p>
+
+            <div class="research-grid" style="margin-top: 1.5rem">
+              <article class="research-card">
+                <div class="research-info">
+                  <h3 class="research-card-title">10,000</h3>
+                  <p class="research-card-summary">
+                    Samples or scenarios used for stochastic evaluation.
+                  </p>
+                </div>
+              </article>
+
+              <article class="research-card">
+                <div class="research-info">
+                  <h3 class="research-card-title">100</h3>
+                  <p class="research-card-summary">
+                    Repetitions reported in the conference paper to reduce
+                    simulation variance.
+                  </p>
+                </div>
+              </article>
+
+              <article class="research-card">
+                <div class="research-info">
+                  <h3 class="research-card-title">IEEE 9 / 30</h3>
+                  <p class="research-card-summary">
+                    Modified IEEE Bus9 and IEEE Bus30 networks used for
+                    thesis-based case studies.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Simple Case Study Gallery -->
+            <div class="case-study-gallery">
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus.png"
+                  data-image-alt="Modified IEEE Bus9 Local Energy Internet network"
+                  data-lightbox-caption="Modified IEEE Bus9 — Thesis case study for reliability-aware routing and EENS-based evaluation."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/IEEE9Bus.png"
+                    alt="Modified IEEE Bus9 Local Energy Internet network"
+                  />
+                </button>
+              </figure>
+
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE30Bus.png"
+                  data-image-alt="Modified IEEE Bus30 Local Energy Internet network"
+                  data-lightbox-caption="Modified IEEE Bus30 — Larger benchmark used for PER validation."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/IEEE30Bus.png"
+                    alt="Modified IEEE Bus30 Local Energy Internet network"
+                  />
+                </button>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        <!-- Results and Visual Evidence -->
+        <!-- Results -->
         <section class="section-block">
           <h2>Results</h2>
 
-          <p>
-            The proposed approach demonstrated improved routing decisions under
-            uncertain operating conditions and provided a quantitative
-            assessment of network reliability compared with deterministic
-            routing strategies.
+          <p style="margin-bottom: 1.2rem">
+            The following figures summarize the main case-study and validation
+            results of the proposed Probabilistic Energy Routing framework.
+            Click each figure for fullscreen inspection and detailed
+            explanation.
           </p>
-        </section>
 
-        <section class="section-block">
-          <h2>Resources</h2>
+          <!-- IEEE 9-Bus Results -->
+          <div class="result-subsection">
+            <div class="thesis-topline">
+              <span class="thesis-icon">①</span>
+              <span>IEEE 9-BUS CASE STUDY</span>
+            </div>
 
-          <div class="publication-links">
-            <a class="publication-link" href="#"> Thesis PDF </a>
+            <h4>Modified IEEE 9-Bus network results</h4>
 
-            <a class="publication-link" href="#"> Journal Paper </a>
+            <div class="results-image-grid">
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res1.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res1.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
 
-            <a class="publication-link" href="#"> GitHub </a>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res2.png"
+                  data-image-alt="IEEE 9-bus routing result"
+                  data-lightbox-title="IEEE 9-Bus Routing Result"
+                  data-lightbox-caption="This figure presents the routing result obtained for the modified IEEE 9-bus case study. Candidate paths are evaluated using transmission losses, capacity constraints, and component availability to identify the most reliable feasible energy transfer route."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res2.png"
+                    alt="IEEE 9-bus routing result"
+                  />
+                </button>
+              </figure>
+
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res3.png"
+                  data-image-alt="IEEE 9-bus reliability assessment result"
+                  data-lightbox-title="IEEE 9-Bus Reliability Assessment"
+                  data-lightbox-caption="This result illustrates reliability assessment for the IEEE 9-bus case study, including the effect of stochastic line loading and component failures on route availability and expected energy not supplied."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res3.png"
+                    alt="IEEE 9-bus reliability assessment result"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res4.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res4.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res5.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res5.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res6.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res6.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res8.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res8.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res7.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE9Bus-Res/IEEE9Bus-Res7.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+            </div>
+          </div>
+
+          <!-- IEEE 30-Bus Results -->
+          <div class="result-subsection">
+            <div class="thesis-topline">
+              <span class="thesis-icon">②</span>
+              <span>IEEE 30-BUS CASE STUDY</span>
+            </div>
+
+            <h4>Modified IEEE 30-Bus network results</h4>
+
+            <div class="results-image-grid">
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res1.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res1.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res2.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res2.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res3.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res3.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res4.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res4.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res5.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res5.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res6.png"
+                  data-image-alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  data-lightbox-title="IEEE 9-Bus Network Topology"
+                  data-lightbox-caption="The modified IEEE 9-bus system is used as a thesis case study to evaluate reliability-aware energy routing in a smaller Local Energy Internet network. This figure shows the network topology and the placement of Energy Routers used for routing and reliability analysis."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/IEEE30Bus-Res/IEEE30Bus-Res6.png"
+                    alt="Modified IEEE 9-bus Local Energy Internet topology"
+                  />
+                </button>
+              </figure>
+            </div>
+          </div>
+
+          <!-- Validation Results -->
+          <div class="result-subsection">
+            <div class="thesis-topline">
+              <span class="thesis-icon">③</span>
+              <span>VALIDATION RESULTS</span>
+            </div>
+
+            <h4>Reliability validation and component criticality</h4>
+
+            <div class="results-image-grid">
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/Validation/VAl1.png"
+                  data-image-alt="EENS validation result"
+                  data-lightbox-title="EENS-Based Reliability Validation"
+                  data-lightbox-caption="This validation result shows the Expected Energy Not Supplied under different routing and failure scenarios. EENS is used to quantify the expected amount of energy that cannot be delivered because of route failure or component outage."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/Validation/VAl1.png"
+                    alt="EENS validation result"
+                  />
+                </button>
+              </figure>
+
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/Validation/VAl2.png"
+                  data-image-alt="PCFSO validation result"
+                  data-lightbox-title="PCFSO Analysis"
+                  data-lightbox-caption="This figure presents the Probability of Component Failure and System Outage. PCFSO is used to evaluate whether a component failure causes load curtailment or system outage in the Local Energy Internet network."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/Validation/VAl2.png"
+                    alt="PCFSO validation result"
+                  />
+                </button>
+              </figure>
+
+              <figure class="result-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/Validation/VAl3.png"
+                  data-image-alt="RRW component ranking result"
+                  data-lightbox-title="RRW Component Criticality Ranking"
+                  data-lightbox-caption="Risk Reduction Worth is used to rank critical components based on their contribution to reliability improvement. Components with higher RRW values are more important candidates for reinforcement, maintenance, or reliability enhancement."
+                >
+                  <img
+                    class="result-image"
+                    src="../../assets/images/Validation/VAl3.png"
+                    alt="RRW component ranking result"
+                  />
+                </button>
+              </figure>
+            </div>
           </div>
         </section>
-      </section>
-    </main>
+
+        <!-- Research Impact -->
+        <section class="section-block">
+          <h2>Research Impact</h2>
+
+          <div class="thesis-box">
+            <div class="thesis-topline">
+              <span class="thesis-icon">↗</span>
+              <span>CONTRIBUTION</span>
+            </div>
+
+            <h4>
+              A reliability-aware basis for routing decisions in Local Energy
+              Internet networks
+            </h4>
+
+            <p>
+              The proposed framework provides a systematic way to evaluate and
+              compare energy-routing paths under uncertainty. By integrating
+              graph-based path discovery, stochastic load modeling, component
+              failure analysis, and reliability metrics, the approach supports
+              more informed decisions for congestion management, route
+              selection, component reinforcement, and resource allocation.
+            </p>
+
+            <p>
+              The results indicate that PER can reduce the risk of selecting
+              unreliable routes and can help identify components whose
+              improvement may significantly enhance overall system reliability.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer
+      style="
+        margin-top: 4rem;
+        padding: 2rem 0;
+        text-align: center;
+        border-top: 1px solid var(--border-color);
+        color: var(--text-muted);
+        font-size: 0.8rem;
+      "
+    >
+      <p>&copy; 2026 Morteza Kolivandi. Research Showcase.</p>
+    </footer>
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="image-lightbox" aria-hidden="true">
+      <div class="image-lightbox-inner">
+        <button
+          class="image-lightbox-close"
+          type="button"
+          aria-label="Close image"
+        >
+          ×
+        </button>
+
+        <img id="lightboxImage" class="image-lightbox-content" src="" alt="" />
+
+        <div class="image-lightbox-text">
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxCaption"></p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="../js/main.js"></script>
   </body>
 </html>
