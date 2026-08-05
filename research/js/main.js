@@ -127,12 +127,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
-  // فعال کردن اولین سکشن هنگام باز شدن صفحه
   if (sections[0] && sections[0].id) {
     setActiveLink(sections[0].id);
   }
 
-  // وقتی روی لینک کلیک می‌کنی، همان لحظه active شود
   sectionLinks.forEach((link) => {
     link.addEventListener("click", () => {
       const href = link.getAttribute("href");
