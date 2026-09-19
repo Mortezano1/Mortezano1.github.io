@@ -35,7 +35,13 @@
         <a href="../../index.html" class="nav-brand">Morteza Kolivandi</a>
       </div>
       <div class="nav-right">
-        <a href="../../index.html" class="tab-link">← Back to Portfolio</a>
+        <a
+          href="../../index.html"
+          class="tab-link"
+          onclick="if (history.length > 1) { event.preventDefault(); history.back(); }"
+        >
+          ← Back
+        </a>
       </div>
     </nav>
 
