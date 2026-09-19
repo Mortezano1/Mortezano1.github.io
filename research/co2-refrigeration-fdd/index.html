@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Robust Fault Detection in CO2 Refrigeration Systems | Morteza Kolivandi
+    </title>
+    <meta
+      name="description"
+      content="Tree-based machine learning for optimal sensor selection and robust fault detection in CO2 refrigeration systems."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="../../index.html" class="nav-brand">Morteza Kolivandi</a>
+      </div>
+      <div class="nav-right">
+        <a href="../../index.html" class="tab-link">← Back to Portfolio</a>
+      </div>
+    </nav>
+
+    <div class="container single-column research-page-layout">
+      <aside class="research-section-nav" aria-label="Research page sections">
+        <div class="research-section-nav-inner">
+          <span class="research-section-nav-kicker">ON THIS PAGE</span>
+          <nav>
+            <a href="#overview" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Overview</span>
+            </a>
+            <a href="#method" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Method</span>
+            </a>
+            <a href="#case-study" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Case Study</span>
+            </a>
+            <a href="#results" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Results</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <section id="overview" class="section-block">
+          <h1 class="profile-name">
+            Robust Fault Detection in CO2 Refrigeration Systems
+          </h1>
+          <p class="profile-subtitle">
+            Optimal sensor selection and robustness analysis using tree-based
+            machine learning.
+          </p>
+
+          <div class="hero-action-links">
+            <a
+              href="https://arxiv.org/pdf/2503.17694"
+              class="tab-link hero-action-link hero-action-link-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span>Read the Paper</span>
+            </a>
+          </div>
+
+          <div class="thesis-box research-focus-box">
+            <h2 class="focus-title">Overview</h2>
+            <p>
+              This study develops data-driven Fault Detection and Diagnosis
+              models for a laboratory-scale CO2 refrigeration system used in
+              supermarket applications. The models classify six common faults
+              while aiming to reduce the number of sensors required for reliable
+              monitoring.
+            </p>
+            <p>
+              The work also evaluates how sensor noise and the failure of a
+              critical sensor affect diagnostic performance, connecting model
+              accuracy with practical reliability.
+            </p>
+            <div class="education-tags" style="margin-top: 1rem">
+              <span>Fault Detection and Diagnosis</span>
+              <span>Machine Learning</span>
+              <span>Sensor Selection</span>
+              <span>CO2 Refrigeration</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="method" class="section-block">
+          <h2>Method</h2>
+          <div class="research-grid">
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Tree-Based Models
+                </h3>
+                <p class="research-card-summary">
+                  Random Forest, XGBoost, CatBoost, and LightGBM classify normal
+                  operation and six refrigeration-system fault conditions.
+                </p>
+              </div>
+            </article>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Sensor Selection
+                </h3>
+                <p class="research-card-summary">
+                  Recursive Feature Addition ranks sensors and incrementally
+                  selects the smallest set needed to reach the target F1-score.
+                </p>
+              </div>
+            </article>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Robustness Analysis
+                </h3>
+                <p class="research-card-summary">
+                  Additive White Gaussian Noise is injected into test data at
+                  different SNR levels to evaluate model resilience.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="thesis-box" style="margin-top: 1.75rem">
+            <div class="thesis-topline">
+              <span class="thesis-icon">↗</span>
+              <span>PROPOSED WORKFLOW</span>
+            </div>
+            <h3>Optimal sensor selection and robustness analysis</h3>
+            <p>
+              The workflow combines model training, performance evaluation, and
+              noise testing in an iterative sensor-selection loop. Sensors are
+              added according to their feature-importance ranking until the
+              F1-score reaches the 99% stopping criterion.
+            </p>
+
+            <ol class="role-list">
+              <li>Start with the original sensor dataset.</li>
+              <li>Split the data into training and unnoisy testing sets.</li>
+              <li>Train the classifier using the current sensor subset.</li>
+              <li>
+                Inject AWGN into the most important sensor in the test set at
+                SNR = 3 dB.
+              </li>
+              <li>
+                Compare performance without noise and robustness with noise.
+              </li>
+              <li>
+                Add the next ranked sensor if the F1-score is below 99%; stop
+                when the threshold is achieved.
+              </li>
+            </ol>
+          </div>
+
+          <figure class="case-study-figure" style="margin-top: 1.75rem">
+            <button
+              class="image-lightbox-trigger"
+              type="button"
+              data-full-image="../../assets/images/co2-refrigeration-fdd/Methodalogy.png"
+              data-image-alt="Proposed methodology for optimal sensor selection and robustness analysis"
+              data-lightbox-title="Proposed Methodology"
+              data-lightbox-caption="The proposed workflow iteratively adds sensors based on feature importance, evaluates classifier performance, injects noise into the most important sensor, and stops when the 99% F1-score criterion is reached."
+            >
+              <img
+                class="case-study-image"
+                src="../../assets/images/co2-refrigeration-fdd/Methodalogy.png"
+                alt="Proposed methodology for optimal sensor selection and robustness analysis"
+              />
+            </button>
+            <figcaption>
+              <strong>Methodology workflow.</strong> Iterative sensor addition,
+              noise injection, and robustness evaluation.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="case-study" class="section-block">
+          <h2>Case Study</h2>
+          <div class="education-timeline">
+            <article class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span>CO2</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">43 kW</span>
+                </div>
+              </div>
+              <div class="education-content">
+                <h3>Laboratory-Scale Refrigeration System</h3>
+                <p class="education-description">
+                  The two-stage CO2 refrigeration system provides low- and
+                  medium-temperature cooling with a total capacity of 43 kW. The
+                  study uses experimental data from normal operation and six
+                  fault conditions.
+                </p>
+                <div class="education-tags">
+                  <span>24 Temperature Sensors</span>
+                  <span>7 Pressure Sensors</span>
+                  <span>3 Mass-Flow Sensors</span>
+                  <span>6 Power Sensors</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="education-card">
+              <div class="education-marker">
+                <div class="date-range-marker">
+                  <span>DATA</span>
+                  <span class="date-sep">—</span>
+                  <span class="date-end current">75 / 25</span>
+                </div>
+              </div>
+              <div class="education-content">
+                <h3>Fault Classes and Dataset Preparation</h3>
+                <p class="education-description">
+                  The dataset contains normal operation, an open LT display case
+                  door, ice accumulation, LT expansion-valve failure, MT
+                  evaporator fan failure, condenser air-path blockage, and MT
+                  evaporator air-path blockage. After undersampling the majority
+                  class, the data were split into 75% training and 25% testing
+                  sets.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <figure class="case-study-figure" style="margin-top: 1.75rem">
+            <button
+              class="image-lightbox-trigger"
+              type="button"
+              data-full-image="../../assets/images/co2-refrigeration-fdd/CaseStudy.png"
+              data-image-alt="CO2 refrigeration system case study"
+              data-lightbox-title="CO2 Refrigeration System"
+              data-lightbox-caption="Laboratory-scale two-stage CO2 refrigeration system used as the case study."
+            >
+              <img
+                class="case-study-image"
+                src="../../assets/images/co2-refrigeration-fdd/CaseStudy.png"
+                alt="CO2 refrigeration system diagram"
+              />
+            </button>
+            <figcaption>
+              <strong>Experimental setup.</strong> Two-stage CO2 refrigeration
+              system used for fault detection and diagnosis.
+            </figcaption>
+          </figure>
+        </section>
+
+        <section id="results" class="section-block">
+          <h2>Results</h2>
+          <div class="thesis-box research-focus-box">
+            <h3 class="focus-title">
+              XGBoost achieved the strongest robustness
+            </h3>
+            <p>
+              The models reached approximately 99% F1-score using compact sensor
+              sets: 4 sensors for Random Forest, 7 for XGBoost, and 5 sensors
+              for both CatBoost and LightGBM.
+            </p>
+            <p>
+              XGBoost achieved 99.25% F1-score and 85.24% robustness at an SNR
+              of 3 dB. Its robustness increased to 90.23% at 10 dB and remained
+              at 79% when the most important sensor was completely unavailable.
+            </p>
+            <p>
+              The results show a practical trade-off: fewer sensors reduce cost,
+              while a broader sensor set improves resilience to noise and sensor
+              failure.
+            </p>
+          </div>
+
+          <div class="research-grid" style="margin-top: 1.5rem">
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  High-Quality Signal
+                </h3>
+                <p class="research-card-summary">
+                  At SNR = 10 dB, XGBoost robustness increased to 90.23%, while
+                  CatBoost and LightGBM reached 57.84% and 50.71%.
+                </p>
+              </div>
+            </article>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Worst-Case Noise
+                </h3>
+                <p class="research-card-summary">
+                  At SNR = 0 dB, XGBoost retained 83.83% robustness, showing the
+                  benefit of its broader seven-sensor configuration.
+                </p>
+              </div>
+            </article>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Critical Sensor Failure
+                </h3>
+                <p class="research-card-summary">
+                  When the most important sensor failed, XGBoost retained 79%
+                  robustness, compared with 37% for Random Forest, 44% for
+                  CatBoost, and 41% for LightGBM.
+                </p>
+              </div>
+            </article>
+          </div>
+
+          <div class="case-study-gallery" style="margin-top: 1.75rem">
+            <figure class="case-study-figure">
+              <button
+                class="image-lightbox-trigger"
+                type="button"
+                data-full-image="../../assets/images/co2-refrigeration-fdd/Result1.png"
+                data-image-alt="Evaluation results and robustness of FDD models"
+                data-lightbox-title="FDD Evaluation and Robustness"
+                data-lightbox-caption="The evaluation results and robustness of the FDD models obtained by the RFA process and tree-based classifiers."
+              >
+                <img
+                  class="case-study-image"
+                  src="../../assets/images/co2-refrigeration-fdd/Result1.png"
+                  alt="Evaluation results and robustness of FDD models"
+                />
+              </button>
+              <figcaption>
+                <strong>RFA evaluation.</strong> The evaluation results and
+                robustness of the FDD models obtained by the RFA process and
+                tree-based classifiers.
+              </figcaption>
+            </figure>
+
+            <figure class="case-study-figure">
+              <button
+                class="image-lightbox-trigger"
+                type="button"
+                data-full-image="../../assets/images/co2-refrigeration-fdd/Result2.png"
+                data-image-alt="Performance and robustness of optimal sensor sets"
+                data-lightbox-title="Optimal Sensor Sets"
+                data-lightbox-caption="Performance and robustness of optimal sensor sets across tree-based classifiers."
+              >
+                <img
+                  class="case-study-image"
+                  src="../../assets/images/co2-refrigeration-fdd/Result2.png"
+                  alt="Performance and robustness of optimal sensor sets"
+                />
+              </button>
+              <figcaption>
+                <strong>Optimal sensor sets.</strong> Performance and robustness
+                of optimal sensor sets across tree-based classifiers.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
