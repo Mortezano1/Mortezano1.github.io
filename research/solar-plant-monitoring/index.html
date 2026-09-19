@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Solar Plant Monitoring & Energy Intelligence | Morteza Kolivandi
+    </title>
+    <meta
+      name="description"
+      content="An energy intelligence platform for monitoring, analysing, and forecasting utility-scale photovoltaic power plants."
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="../../index.html" class="nav-brand">Morteza Kolivandi</a>
+      </div>
+      <div class="nav-right">
+        <a
+          href="../../index.html"
+          class="tab-link"
+          onclick="
+            if (history.length > 1) {
+              event.preventDefault();
+              window.history.back();
+            }
+          "
+        >
+          &larr; Back
+        </a>
+      </div>
+    </nav>
+
+    <div class="container single-column research-page-layout">
+      <aside class="research-section-nav" aria-label="Project page sections">
+        <div class="research-section-nav-inner">
+          <span class="research-section-nav-kicker">ON THIS PAGE</span>
+          <nav>
+            <a href="#overview" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Overview</span>
+            </a>
+            <a href="#platform-model" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Platform Model</span>
+            </a>
+            <a href="#monitoring-apps" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Monitoring Apps</span>
+            </a>
+            <a href="#intelligence-layer" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Energy Intelligence</span>
+            </a>
+            <a href="#role-impact" class="research-section-nav-link">
+              <span class="research-section-dot"></span>
+              <span>Role & Impact</span>
+            </a>
+          </nav>
+        </div>
+      </aside>
+
+      <main class="content-area">
+        <section id="overview" class="section-block">
+          <h1 class="profile-name">
+            Solar Plant Monitoring &amp; Energy Intelligence Platform
+          </h1>
+          <p class="profile-subtitle">
+            Data engineering, analytics, and forecasting for utility-scale
+            photovoltaic power plant performance assessment and operational
+            optimization.
+          </p>
+
+          <div class="thesis-box research-focus-box">
+            <h2 class="focus-title">Core contribution</h2>
+            <p>
+              I developed the analytics and forecasting layer of a monitoring
+              platform deployed at a
+              <strong>7.5 MW photovoltaic plant in Mahallat, Iran</strong>. My
+              responsibilities span data pipeline design, SCADA integration,
+              performance modeling, machine-learning forecasting, anomaly
+              detection, and fault diagnosis across the platform's three
+              dashboard applications.
+            </p>
+            <p>
+              The platform ingests meteorological observations (GHI, DNI, DHI,
+              POA, cloud cover, aerosol depth, temperature, humidity, wind) and
+              equipment measurements (inverter power, efficiency, MPPT voltages,
+              grid frequency, phase voltages, environmental sensors) at
+              15-minute resolution, synchronizes them with plant structure
+              metadata, and presents them through three analytical views: solar
+              resource monitoring, real-time equipment status, and historical
+              performance analysis.
+            </p>
+            <div class="education-tags" style="margin-top: 1rem">
+              <span>SCADA Integration</span>
+              <span>Irradiance Modeling</span>
+              <span>Performance Analytics</span>
+              <span>ML-Based Forecasting</span>
+              <span>Loss Decomposition</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="platform-model" class="section-block">
+          <h2>Data Model &amp; Configuration Layer</h2>
+          <p>
+            Plant structure and equipment configuration form the semantic layer
+            that maps SCADA signals to operational entities. This layer ensures
+            data provenance, enables aggregation across hierarchy levels, and
+            supports consistent templating across multi-site deployments.
+          </p>
+          <div class="research-grid">
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Entity hierarchy
+                </h3>
+                <p class="research-card-summary">
+                  Company → Plant → Functional Location (e.g. LV Stations) →
+                  Equipment (Inverters, Measuring Centers, Sensors, IO Boxes).
+                  Each level supports role-based access control, data
+                  partitioning, and multi-site management.
+                </p>
+              </div>
+            </article>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Characteristics &amp; Metadata
+                </h3>
+                <p class="research-card-summary">
+                  Quantitative attributes (AC/DC power, efficiency, voltage,
+                  current, irradiance, temperature, pressure) are defined with
+                  units, valid ranges, acquisition frequency, and storage
+                  policy. This ensures uniform treatment across data pipelines.
+                </p>
+              </div>
+            </article>
+            <article class="research-card">
+              <div class="research-info">
+                <h3 class="research-card-title bullet-title">
+                  Template system
+                </h3>
+                <p class="research-card-summary">
+                  Equipment-type templates (e.g. Inverter Monitoring, Weather
+                  Station) group standard characteristics. Assignment to
+                  instances ensures consistency, reduces configuration drift,
+                  and simplifies expansion to new plants.
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="thesis-box research-focus-box" style="margin-top: 1.5rem">
+            <p>
+              <strong
+                >Structure &rarr; Data mapping &rarr; Ingestion &rarr;
+                Dashboards</strong
+              >
+            </p>
+            <p>
+              Every dashboard value is traceable to a characteristic assigned to
+              an equipment instance within the plant hierarchy. This audit trail
+              is essential for data quality assurance and root-cause analysis in
+              production environments.
+            </p>
+          </div>
+        </section>
+
+        <section id="monitoring-apps" class="section-block">
+          <h2>Three Analytical Views</h2>
+          <p>
+            The platform provides three complementary dashboards, each
+            addressing a distinct analytical question aligned with operational
+            and managerial needs.
+          </p>
+
+          <article style="margin-top: 2rem">
+            <h3 style="margin-bottom: 1rem">01 / Weather Status Dashboard</h3>
+            <div class="case-study-gallery" style="margin-bottom: 1.5rem">
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/solar-plant-monitoring/WeatherDashboard.png"
+                  data-image-alt="Weather Status dashboard overview"
+                  data-lightbox-title="Weather Status Interface"
+                  data-lightbox-caption="15-minute resolution irradiance and meteorological data with 3-day forecast."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/solar-plant-monitoring/WeatherDashboard.png"
+                    alt="Weather Status dashboard overview"
+                  />
+                </button>
+                <figcaption>
+                  <strong>Weather Status Overview.</strong> Irradiance and
+                  atmospheric monitoring interface.
+                </figcaption>
+              </figure>
+
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/solar-plant-monitoring/WeatherEX.png"
+                  data-image-alt="Weather Status detailed parameters"
+                  data-lightbox-title="Weather Parameters"
+                  data-lightbox-caption="Detailed GHI, DNI, DHI, POA, and cloud metrics."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/solar-plant-monitoring/WeatherEX.png"
+                    alt="Weather Status detailed parameters"
+                  />
+                </button>
+                <figcaption>
+                  <strong>Detailed Metrics.</strong> Irradiance decomposition
+                  and environmental parameters.
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              This application consolidates solar resource and meteorological
+              inputs essential for performance interpretation. It integrates:
+            </p>
+            <ul
+              style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8"
+            >
+              <li>
+                <strong>Irradiance parameters:</strong> GHI, DNI, DHI, GTI, POA
+                with cloud cover, aerosol optical depth, and cloud type
+                classification.
+              </li>
+              <li>
+                <strong>Thermodynamic conditions:</strong> Air temperature,
+                relative humidity, dew point, surface pressure.
+              </li>
+              <li>
+                <strong>Atmospheric effects:</strong> Wind speed and direction,
+                precipitation, snowfall, visibility, Rayleigh scattering.
+              </li>
+              <li>
+                <strong>Solar geometry:</strong> Zenith angle, elevation,
+                azimuth for irradiance model validation.
+              </li>
+              <li>
+                <strong>Temporal resolution:</strong> 15-minute observations for
+                current day, 1-hour forecast for 72 hours ahead (Jalali
+                calendar).
+              </li>
+            </ul>
+            <p style="margin-top: 1rem">
+              This module enables rapid assessment of whether generation
+              variations correlate with measurable atmospheric changes,
+              supporting both real-time anomaly detection and retrospective
+              causal analysis of performance shortfalls.
+            </p>
+          </article>
+
+          <article style="margin-top: 2rem">
+            <h3 style="margin-bottom: 1rem">
+              02 / Real-Time Monitoring Dashboard
+            </h3>
+            <div class="case-study-gallery" style="margin-bottom: 1.5rem">
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/solar-plant-monitoring/Realtimedashboard.png"
+                  data-image-alt="Real-time equipment status and plant overview"
+                  data-lightbox-title="Real-Time Monitoring Interface"
+                  data-lightbox-caption="Live SCADA data with plant hierarchy and functional location drill-down."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/solar-plant-monitoring/Realtimedashboard.png"
+                    alt="Real-time equipment status and plant overview"
+                  />
+                </button>
+                <figcaption>
+                  <strong>Real-Time Monitoring Overview.</strong> Plant-level
+                  and equipment-level operational status.
+                </figcaption>
+              </figure>
+
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/solar-plant-monitoring/RealtimeEX.png"
+                  data-image-alt="LV Station drill-down and inverter detail view"
+                  data-lightbox-title="LV Station &amp; Inverter Details"
+                  data-lightbox-caption="Hierarchical drill-down with heatmaps and per-equipment metrics."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/solar-plant-monitoring/RealtimeEX.png"
+                    alt="LV Station drill-down and inverter detail view"
+                  />
+                </button>
+                <figcaption>
+                  <strong>Inverter Detail View.</strong> Per-MPPT and per-phase
+                  measurements with efficiency tracking.
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              This application presents liveoperational state of the plant and
+              its equipment. Key features:
+            </p>
+            <ul
+              style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8"
+            >
+              <li>
+                <strong>Plant overview:</strong> Aggregated power, yield,
+                efficiency, and system health status.
+              </li>
+              <li>
+                <strong>LV station view:</strong> Hierarchical drill-down with
+                heatmaps showing per-inverter generation and deviations from
+                cluster mean.
+              </li>
+              <li>
+                <strong>Inverter detail:</strong> Daily yield, power factor,
+                efficiency, grid frequency, per-MPPT voltage/current, per-phase
+                voltage/current, power and energy profiles.
+              </li>
+              <li>
+                <strong>Reporting:</strong> 15-minute, hourly, daily, and
+                custom-range exportable reports.
+              </li>
+            </ul>
+            <p style="margin-top: 1rem">
+              The hierarchical design supports rapid localization of equipment
+              anomalies (e.g. single inverter underperformance, MPPT imbalance,
+              phase asymmetry) and facilitates O&amp;M decision-making during
+              operating hours.
+            </p>
+          </article>
+
+          <article style="margin-top: 2rem">
+            <h3 style="margin-bottom: 1rem">
+              03 / Analysis Monitoring Dashboard
+            </h3>
+            <div class="case-study-gallery" style="margin-bottom: 1.5rem">
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/solar-plant-monitoring/Analysisdashboard.png"
+                  data-image-alt="Performance analysis with actual vs expected vs forecasted generation"
+                  data-lightbox-title="Analysis Monitoring Interface"
+                  data-lightbox-caption="Comparative analysis of measured, modeled, and predicted plant output."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/solar-plant-monitoring/Analysisdashboard.png"
+                    alt="Performance analysis with actual vs expected vs forecasted generation"
+                  />
+                </button>
+                <figcaption>
+                  <strong>Analysis Monitoring Overview.</strong> Historical
+                  performance decomposition and KPI tracking.
+                </figcaption>
+              </figure>
+
+              <figure class="case-study-figure">
+                <button
+                  class="image-lightbox-trigger"
+                  type="button"
+                  data-full-image="../../assets/images/solar-plant-monitoring/AnalysisEX.png"
+                  data-image-alt="Performance loss analysis and KPI metrics"
+                  data-lightbox-title="Loss Decomposition &amp; KPIs"
+                  data-lightbox-caption="Efficiency, operational, and loss analysis dashboards."
+                >
+                  <img
+                    class="case-study-image"
+                    src="../../assets/images/solar-plant-monitoring/AnalysisEX.png"
+                    alt="Performance loss analysis and KPI metrics"
+                  />
+                </button>
+                <figcaption>
+                  <strong>Loss Decomposition.</strong> Total, panel,
+                  temperature, and inverter loss tracking.
+                </figcaption>
+              </figure>
+            </div>
+            <p>
+              This application supports historical analysis and forward-looking
+              assessment. Core components:
+            </p>
+            <ul
+              style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8"
+            >
+              <li>
+                <strong>Generation comparison:</strong> Actual (SCADA-measured)
+                vs. Expected (physics-based simulation) vs. Forecasted
+                (machine-learning predicted).
+              </li>
+              <li>
+                <strong>Temporal aggregation:</strong> 15-minute, hourly, daily,
+                weekly, monthly, and annual summaries; support for Jalali
+                calendar periods and custom date ranges.
+              </li>
+              <li>
+                <strong>KPI dashboards:</strong> Efficiency metrics (PR, CF,
+                panel &amp; inverter η, simulation index, prediction accuracy);
+                operational metrics (peak, mean, std-dev, ramp rate, yield);
+                loss decomposition (total, panel, temperature, inverter).
+              </li>
+              <li>
+                <strong>Visualization:</strong> Both card summaries (for
+                executive overview) and time-series charts (for trend analysis
+                and comparative assessment).
+              </li>
+            </ul>
+            <p style="margin-top: 1rem">
+              This layer transforms raw measurements into engineered KPIs that
+              quantify plant performance, identify loss mechanisms, and track
+              forecast model accuracy over operational timescales.
+            </p>
+          </article>
+        </section>
+
+        <section id="intelligence-layer" class="section-block">
+          <h2>Analytics &amp; Forecasting Pipelines</h2>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 1rem">
+            Expected Generation (Physics-Based Simulation)
+          </h3>
+          <p>
+            Expected generation establishes a defensible baseline by modeling
+            plant response to measured environmental conditions. The model
+            incorporates:
+          </p>
+          <ul style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8">
+            <li>
+              Plane-of-array irradiance from weather data and site geometry.
+            </li>
+            <li>
+              PV module efficiency as function of irradiance and cell
+              temperature (temperature coefficient).
+            </li>
+            <li>
+              Inverter efficiency curves as function of input power and voltage
+              operating point.
+            </li>
+            <li>
+              System losses (soiling, wiring, transformer, mismatch, clipping,
+              downtime).
+            </li>
+          </ul>
+          <p style="margin-top: 1rem">
+            Deviations of Actual from Expected signal equipment degradation,
+            operational faults, or unaccounted losses.
+          </p>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 1rem">
+            Forecasted Generation (Machine Learning)
+          </h3>
+          <p>
+            Multiple candidate models are trained on historical SCADA and
+            weather data to predict generation 1–72 hours ahead:
+          </p>
+          <ul style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8">
+            <li>
+              <strong>Linear Regression &amp; Ridge:</strong> Baseline
+              interpretable models.
+            </li>
+            <li>
+              <strong
+                >Random Forest &amp; Gradient Boosting (XGBoost,
+                LightGBM):</strong
+              >
+              Capture non-linearities and feature interactions.
+            </li>
+            <li>
+              <strong>Support Vector Regression:</strong> Kernel-based approach
+              for high-dimensional feature spaces.
+            </li>
+            <li>
+              <strong>LSTM &amp; temporal networks:</strong> Exploit sequential
+              time-series structure.
+            </li>
+          </ul>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 1rem">
+            Model Selection &amp; Evaluation
+          </h3>
+          <p>
+            Models are compared using multiple metrics to balance bias-variance
+            trade-off:
+          </p>
+          <ul style="margin-top: 0.8rem; margin-left: 1.5rem; line-height: 1.8">
+            <li>
+              <strong>MAE (Mean Absolute Error):</strong> Average magnitude of
+              prediction error; robust to outliers.
+            </li>
+            <li>
+              <strong>RMSE (Root Mean Square Error):</strong> Penalizes larger
+              errors; sensitive to tail events.
+            </li>
+            <li>
+              <strong>R² (Coefficient of Determination):</strong> Proportion of
+              variance explained; reference to trivial mean-based prediction.
+            </li>
+            <li>
+              <strong>F1-Score:</strong> Harmonic mean of precision and recall
+              for binary fault classification tasks.
+            </li>
+          </ul>
+          <p style="margin-top: 1rem">
+            The platform enables <strong>adaptive model switching</strong>: if
+            monitoring reveals a candidate model achieving better out-of-sample
+            accuracy, it can be promoted to the active forecast. This allows the
+            platform to tune forecasting strategy as seasonal patterns and data
+            quality evolve.
+          </p>
+
+          <h3 style="margin-top: 1.5rem; margin-bottom: 1rem">KPI Framework</h3>
+          <p>
+            KPIs are computed from measurements, simulations, and forecasts,
+            grouped into three categories:
+          </p>
+
+          <article style="margin-top: 1.5rem">
+            <h4 style="margin-bottom: 0.8rem">Efficiency &amp; Performance</h4>
+            <ul style="margin-left: 1.5rem; line-height: 1.8">
+              <li>
+                <strong>Performance Ratio (PR):</strong> Ratio of measured yield
+                to yield expected from available irradiance; normalized by
+                inverter efficiency curve.
+              </li>
+              <li>
+                <strong>Capacity Factor (CF):</strong> Measured energy output as
+                fraction of nameplate capacity over period; accounts for climate
+                and seasonal variation.
+              </li>
+              <li>
+                <strong>PV Efficiency:</strong> Simulated power output from
+                modules as function of irradiance and temperature; used to
+                isolate module-level losses.
+              </li>
+              <li>
+                <strong>Inverter Efficiency:</strong> Measured AC power divided
+                by measured DC power; temporal profile shows loading-dependent
+                behavior.
+              </li>
+              <li>
+                <strong>Forecast Accuracy:</strong> Tracking error between
+                predicted and actual; lower is better.
+              </li>
+            </ul>
+          </article>
+
+          <article style="margin-top: 1.5rem">
+            <h4 style="margin-bottom: 0.8rem">Operational Metrics</h4>
+            <ul style="margin-left: 1.5rem; line-height: 1.8">
+              <li>
+                <strong>Peak Power, Mean Power, Std. Dev:</strong> Operational
+                envelope and stability characterization.
+              </li>
+              <li>
+                <strong>Ramp Rate:</strong> Rate of power change (dP/dt); high
+                ramps indicate cloud transients or equipment switching.
+              </li>
+              <li>
+                <strong>Max Ramp Rate:</strong> Worst-case instantaneous rate;
+                used to assess grid integration risk.
+              </li>
+              <li>
+                <strong>Period Yield:</strong> Energy delivered in period;
+                direct measure of production promise fulfillment.
+              </li>
+            </ul>
+          </article>
+
+          <article style="margin-top: 1.5rem">
+            <h4 style="margin-bottom: 0.8rem">Loss Decomposition</h4>
+            <ul style="margin-left: 1.5rem; line-height: 1.8">
+              <li>
+                <strong>Total Loss:</strong> Expected minus Actual (in MWh or
+                percentage).
+              </li>
+              <li>
+                <strong>Module Loss:</strong> Soiling, degradation, mismatch,
+                wiring losses in DC subsystem.
+              </li>
+              <li>
+                <strong>Temperature Loss:</strong> Reduction in module
+                efficiency due to elevated cell temperature relative to STC.
+              </li>
+              <li>
+                <strong>Inverter Loss:</strong> Efficiency shortfall and
+                clipping losses in power conditioning.
+              </li>
+            </ul>
+          </article>
+        </section>
+
+        <section id="role-impact" class="section-block">
+          <h2>Technical Scope &amp; Deliverables</h2>
+          <div class="thesis-box research-focus-box">
+            <p>
+              <strong>Data Pipeline Architecture:</strong> Designed ETL
+              workflows integrating SCADA collectors, weather APIs, time-series
+              database (TimescaleDB), and FastAPI backends. Implemented
+              idempotent data synchronization with retroactive gap-filling and
+              schema evolution support for multi-site scaling.
+            </p>
+            <p style="margin-top: 1rem">
+              <strong>Configuration &amp; Metadata:</strong> Architected the
+              entity-characteristic-template system that decouples asset
+              structure from data acquisition. Enables consistent multi-site
+              deployments and supports dynamic equipment addition without schema
+              changes.
+            </p>
+            <p style="margin-top: 1rem">
+              <strong>Solar Resource Modeling:</strong> Implemented
+              position-of-sun and plane-of-array irradiance calculations using
+              meteorological inputs. Validated against empirical data to
+              quantify environmental performance limits.
+            </p>
+            <p style="margin-top: 1rem">
+              <strong>Performance Analytics:</strong> Developed simulators for
+              module behaviour (temperature derating), inverter efficiency
+              curves, and system-level losses. Built automated loss
+              decomposition to isolate environmental vs. equipment-based
+              shortfalls.
+            </p>
+            <p style="margin-top: 1rem">
+              <strong>Forecasting &amp; Model Selection:</strong> Implemented
+              candidate model frameworks (Linear, Tree, Kernel, Recurrent).
+              Built model evaluation pipelines using cross-validation, holdout
+              testing, and online performance tracking. Enables adaptive
+              switching based on real-time accuracy metrics.
+            </p>
+            <p style="margin-top: 1rem">
+              <strong>Anomaly Detection &amp; Fault Diagnosis:</strong>
+              Developed unsupervised (e.g. isolation forest) and supervised
+              (e.g. classification trees) methods for detecting inverter faults,
+              sensor failures, and operational anomalies.
+            </p>
+            <p style="margin-top: 1rem">
+              <strong>Dashboard &amp; Reporting:</strong> Designed three-tier
+              analytical UI (operational, plant-level, and forecast) with
+              temporal aggregation, Jalali calendar support, and export-ready
+              KPI cards.
+            </p>
+            <div class="education-tags" style="margin-top: 1.5rem">
+              <span>Python &amp; FastAPI</span>
+              <span>PostgreSQL / TimescaleDB</span>
+              <span>Scikit-learn &amp; XGBoost</span>
+              <span>SCADA Integration</span>
+              <span>REST APIs</span>
+              <span>Docker &amp; Linux</span>
+            </div>
+          </div>
+
+          <h3 style="margin-top: 2rem; margin-bottom: 1rem">
+            Impact &amp; Extensibility
+          </h3>
+          <p>
+            The platform deployed at Mahallat provides a production-grade
+            foundation for scaling to additional utility-scale PV assets. Its
+            layered architecture—configuration, data ingestion, analytics,
+            dashboards—decouples each concern and reduces barriers to multi-site
+            expansion.
+          </p>
+          <p style="margin-top: 1rem">
+            By connecting environmental observations to equipment-level
+            measurements to plant-level KPIs, the system gives operators a
+            shared language for interpreting performance, prioritizing
+            interventions, and tracking the effectiveness of O&amp;M decisions.
+          </p>
+        </section>
+      </main>
+    </div>
+
+    <!-- Image Lightbox -->
+    <div id="imageLightbox" class="image-lightbox" aria-hidden="true">
+      <div class="image-lightbox-inner">
+        <button
+          class="image-lightbox-close"
+          type="button"
+          aria-label="Close lightbox"
+        >
+          ✕
+        </button>
+        <img id="lightboxImage" class="image-lightbox-content" src="" alt="" />
+        <div class="image-lightbox-text">
+          <h3 id="lightboxTitle" style="margin: 0 0 0.5rem 0"></h3>
+          <p id="lightboxCaption" style="margin: 0"></p>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>
