@@ -587,6 +587,34 @@ p a:hover {
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.28);
 }
 
+.education-content-featured {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(11rem, 24%, 15rem);
+  align-items: center;
+  gap: 2rem;
+}
+
+.education-content-featured .education-header {
+  margin-bottom: 1.15rem;
+}
+
+.education-featured-image {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid rgba(0, 217, 255, 0.2);
+  border-radius: 1rem;
+  background: #101923;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.22);
+}
+
+.education-featured-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /* Header */
 .education-header {
   display: flex;
@@ -772,6 +800,17 @@ p a:hover {
   .education-content {
     padding: 1.3rem;
     border-radius: 0.9rem;
+  }
+
+  .education-content-featured {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .education-featured-image {
+    order: -1;
+    width: min(100%, 15rem);
+    justify-self: center;
   }
 
   .education-header {
